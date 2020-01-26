@@ -1,9 +1,21 @@
 <template>
     <header class="Header">
         <v-container>
-            <nuxt-link to="/">INÍCIO</nuxt-link>
-
-            <nuxt-link to="/sobre">SOBRE</nuxt-link>
+            <a
+                @click="$vuetify.goTo('.PageHeader', options)"
+                href="javascript:void(0)"
+                >INÍCIO</a
+            >
+            <a
+                @click="$vuetify.goTo('.PageItem', options)"
+                href="javascript:void(0)"
+                >TRABALHOS</a
+            >
+            <a
+                @click="$vuetify.goTo('.About', options)"
+                href="javascript:void(0)"
+                >SOBRE</a
+            >
         </v-container>
     </header>
 </template>
@@ -16,7 +28,15 @@ export default {
     components: {},
     props: {},
     data: () => ({}),
-    computed: {},
+    computed: {
+        scrollOptions() {
+            return {
+                duration: 1000,
+                offset: 0,
+                easing: 'easeInOutCubic'
+            }
+        }
+    },
     watch: {},
     created() {},
     mounted() {},

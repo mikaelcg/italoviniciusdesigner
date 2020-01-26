@@ -84,7 +84,6 @@ export default {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 5rem 0;
 
         .PageHeader__content {
             display: flex;
@@ -143,7 +142,7 @@ export default {
                 animation: slide-bottom 0.5s ease-in-out both infinite alternate
                     1s;
                 cursor: pointer;
-                margin-top: 5rem;
+                margin: 5rem 0;
             }
         }
     }
