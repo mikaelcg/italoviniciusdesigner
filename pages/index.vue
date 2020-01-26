@@ -1,0 +1,76 @@
+<template>
+    <div class="Home">
+        <PageHeader>
+            <template v-slot:PageHeaderTitle>
+                ÍTALO VINÍCIUS
+            </template>
+            <template v-slot:PageHeaderSubtitle>
+                UX DESIGNER
+            </template>
+            <template v-slot:PageHeaderDescription>
+                Olá, sou Ítalo, um designer multidisciplinar, com foco em
+                produtos, serviços e experiências.
+            </template>
+            <template v-slot:PageHeaderImage>
+                <img src="Italo_Vinicius.png" alt="Ítalo Vinícius" />
+            </template>
+        </PageHeader>
+
+        <PageItem
+            v-for="(item, index) in pageItems"
+            :key="index"
+            :reverse="item.reverse"
+        >
+            <template v-slot:PageItemImage>
+                <img :src="item.imageUrl" :alt="item.title" />
+            </template>
+            <template v-slot:PageItemTitle>{{ item.title }}</template>
+            <template v-slot:PageItemSubtitle> {{ item.subtitle }}</template>
+            <template v-slot:PageItemDescription>
+                {{ item.description }}
+            </template>
+        </PageItem>
+    </div>
+</template>
+
+<script>
+// import { mapActions, mapGetters, mapState } from 'vuex'
+import PageHeader from '@/components/page-components/PageHeader'
+import PageItem from '@/components/page-components/PageItem'
+export default {
+    name: 'Home',
+    components: { PageHeader, PageItem },
+    props: {},
+    data: () => ({
+        pageItems: [
+            {
+                imageUrl: 'agni.png',
+                title: 'AGNI',
+                subtitle: 'APLICATIVO',
+                description: 'Projeto finalista do NASA Space Apps 2019',
+                to: '/agni',
+                reverse: false
+            },
+            {
+                title: 'UMMENSE',
+                subtitle: 'NOVO MENU',
+                description:
+                    'Um menu com uma organização baseada na jornada e objetivos do usuário.',
+                to: '/ummense-novo-menu',
+                reverse: true
+            }
+        ]
+    }),
+    computed: {},
+    watch: {},
+    created() {},
+    mounted() {},
+    methods: {}
+}
+</script>
+
+<style lang="scss" scoped>
+// @import '@/assets/variables.scss';
+.Home {
+}
+</style>
