@@ -1,6 +1,8 @@
 <template>
-    <div class="Sobre">
-        <h1>Sobre</h1>
+    <div class="About">
+        <v-container>
+            <h1>Sobre</h1>
+        </v-container>
     </div>
 </template>
 
@@ -8,7 +10,7 @@
 // import { mapActions, mapGetters, mapState } from 'vuex'
 
 export default {
-    name: '',
+    name: 'About',
     components: {},
     props: {},
     data: () => ({}),
@@ -22,4 +24,7 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
+
+.About {
+}
 </style>

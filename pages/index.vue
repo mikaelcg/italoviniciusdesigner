@@ -30,6 +30,8 @@
                 {{ item.description }}
             </template>
         </PageItem>
+
+        <About></About>
     </div>
 </template>
 
@@ -37,9 +39,10 @@
 // import { mapActions, mapGetters, mapState } from 'vuex'
 import PageHeader from '@/components/page-components/PageHeader'
 import PageItem from '@/components/page-components/PageItem'
+import About from '@/components/page-components/About'
 export default {
     name: 'Home',
-    components: { PageHeader, PageItem },
+    components: { PageHeader, PageItem, About },
     props: {},
     data: () => ({
         pageItems: [
