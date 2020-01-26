@@ -119,8 +119,7 @@ export default {
                 }
 
                 .PageHeader__content-text-description {
-                    font-style: normal;
-                    font-weight: bold;
+                    font-family: $acta-display-bold;
                     font-size: 36px;
                     line-height: 54px;
                     color: $grey2;
