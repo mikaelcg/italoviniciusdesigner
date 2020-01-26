@@ -1,10 +1,14 @@
 <template>
     <div class="PageItem">
         <v-container :class="[{ reverse: reverse }]">
-            <div class="PageItem__image">
+            <div :data-aos="getImageAnimation()" class="PageItem__image">
                 <slot name="PageItemImage"></slot>
             </div>
-            <div class="PageItem__text">
+            <div
+                :data-aos="getTextAnimation()"
+                class="PageItem__text"
+                data-aos-delay="200"
+            >
                 <div class="PageItem__text-title">
                     <span>
                         <slot name="PageItemTitle"></slot>
@@ -45,7 +49,23 @@ export default {
     watch: {},
     created() {},
     mounted() {},
-    methods: {}
+    methods: {
+        getImageAnimation() {
+            if (this.reverse) {
+                return 'fade-left'
+            }
+
+            return 'fade-right'
+        },
+
+        getTextAnimation() {
+            if (this.reverse) {
+                return 'fade-right'
+            }
+
+            return 'fade-left'
+        }
+    }
 }
 </script>
 

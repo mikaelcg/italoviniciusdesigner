@@ -33,6 +33,7 @@
             </div>
 
             <div
+                @click="$vuetify.goTo(target, options)"
                 class="PageHeader__icon"
                 data-aos="fade-down"
                 data-aos-delay="900"
@@ -50,8 +51,23 @@ export default {
     name: 'PageHeader',
     components: {},
     props: {},
-    data: () => ({}),
-    computed: {},
+    data: () => ({
+        target: '.PageItem'
+    }),
+    computed: {
+        scrollTarget() {
+            const value = this[this.type]
+            if (!isNaN(value)) return Number(value)
+            else return value
+        },
+        scrollOptions() {
+            return {
+                duration: 1000,
+                offset: 0,
+                easing: 'easeInOutCubic'
+            }
+        }
+    },
     watch: {},
     created() {},
     mounted() {},

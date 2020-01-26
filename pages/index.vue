@@ -52,12 +52,31 @@ export default {
                 reverse: false
             },
             {
+                imageUrl: 'Ummense_novo_menu.png',
                 title: 'UMMENSE',
                 subtitle: 'NOVO MENU',
                 description:
                     'Um menu com uma organização baseada na jornada e objetivos do usuário.',
                 to: '/ummense-novo-menu',
                 reverse: true
+            },
+            {
+                imageUrl: 'Ummense_novo_site.png',
+                title: 'UMMENSE',
+                subtitle: 'NOVO SITE',
+                description:
+                    'Um novo site que se apresenta de maneira mais clara, moderna e consegue comunicar o que é a marca.',
+                to: '/ummense-novo-site',
+                reverse: false
+            },
+            {
+                imageUrl: 'Ummense_novo_formulario.png',
+                title: 'UMMENSE',
+                subtitle: 'NOVO FORMULÁRIO',
+                description:
+                    'Um formulário de cadastro com um novo fluxo e um novo visual, o que gerou mais adesão.',
+                to: '/ummense-novo-formulario',
+                reverse: false
             }
         ]
     }),
