@@ -6,6 +6,7 @@
                     <div
                         class="PageHeader__content-text-title"
                         data-aos="fade-right"
+                        data-aos-duration="800"
                     >
                         <h1>
                             <slot name="PageHeaderTitle"></slot>
@@ -21,22 +22,20 @@
                     <p
                         class="PageHeader__content-text-description"
                         data-aos="fade-left"
-                        data-aos-delay="600"
                     >
                         <slot name="PageHeaderDescription"></slot>
                     </p>
                 </div>
 
                 <div class="PageHeader__content-image">
-                    <slot name="PageHeaderImage"> </slot>
+                    <slot name="PageHeaderImage"></slot>
                 </div>
             </div>
 
             <div
-                @click="$vuetify.goTo(target, options)"
+                @click="$vuetify.goTo(target, scrollOptions)"
                 class="PageHeader__icon"
                 data-aos="fade-down"
-                data-aos-delay="900"
             >
                 <v-icon>mdi-arrow-down</v-icon>
             </div>
@@ -84,12 +83,14 @@ export default {
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
+        padding: 8rem 1.2rem 1.2rem 1.2rem;
 
         .PageHeader__content {
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: relative;
+            width: 100%;
 
             .PageHeader__content-text {
                 .PageHeader__content-text-title {
@@ -101,6 +102,8 @@ export default {
                         font-weight: 600;
                         font-size: 14px;
                         line-height: 20px;
+                        letter-spacing: 0.1em;
+                        font-family: $graphik-regular;
                         letter-spacing: 0.1em;
                     }
 
@@ -141,7 +144,7 @@ export default {
                 animation: slide-bottom 0.5s ease-in-out both infinite alternate
                     1s;
                 cursor: pointer;
-                margin: 5rem 0;
+                margin-bottom: 5rem;
             }
         }
     }

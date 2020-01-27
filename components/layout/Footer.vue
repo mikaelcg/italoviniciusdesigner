@@ -69,9 +69,10 @@ export default {
 .Footer {
     &__content {
         padding: 10rem 0;
+
         h3 {
             font-style: normal;
-            font-weight: bold;
+            font-family: $acta-display-bold;
             font-size: 3.6rem;
             line-height: 147.8%;
             color: $grey2;
@@ -79,10 +80,11 @@ export default {
 
         span {
             font-style: normal;
-            font-weight: normal;
+            font-family: $graphik-regular;
             font-size: 2.1rem;
             line-height: 3.1rem;
             color: $grey1;
+            margin-top: 3rem;
         }
     }
 

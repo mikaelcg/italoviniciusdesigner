@@ -12,7 +12,7 @@
                 produtos, serviços e experiências.
             </template>
             <template v-slot:PageHeaderImage>
-                <img src="Italo_Vinicius.png" alt="Ítalo Vinícius" />
+                <img src="Home/Italo_Vinicius.png" alt="Ítalo Vinícius" />
             </template>
         </PageHeader>
 
@@ -47,7 +47,7 @@ export default {
     data: () => ({
         pageItems: [
             {
-                imageUrl: 'agni.png',
+                imageUrl: 'Home/agni.png',
                 title: 'AGNI',
                 subtitle: 'APLICATIVO',
                 description: 'Projeto finalista do NASA Space Apps 2019',
@@ -55,7 +55,7 @@ export default {
                 reverse: false
             },
             {
-                imageUrl: 'Ummense_novo_menu.png',
+                imageUrl: 'Home/Ummense_novo_menu.png',
                 title: 'UMMENSE',
                 subtitle: 'NOVO MENU',
                 description:
@@ -64,7 +64,7 @@ export default {
                 reverse: true
             },
             {
-                imageUrl: 'Ummense_novo_site.png',
+                imageUrl: 'Home/Ummense_novo_site.png',
                 title: 'UMMENSE',
                 subtitle: 'NOVO SITE',
                 description:
@@ -73,13 +73,13 @@ export default {
                 reverse: false
             },
             {
-                imageUrl: 'Ummense_novo_formulario.png',
+                imageUrl: 'Home/Ummense_novo_formulario.png',
                 title: 'UMMENSE',
                 subtitle: 'NOVO FORMULÁRIO',
                 description:
                     'Um formulário de cadastro com um novo fluxo e um novo visual, o que gerou mais adesão.',
                 to: '/ummense-novo-formulario',
-                reverse: false
+                reverse: true
             }
         ]
     }),

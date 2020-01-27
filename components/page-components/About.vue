@@ -100,7 +100,7 @@ export default {
 
     h3 {
         color: $gold;
-        font-weight: 600;
+        font-family: $graphik-semibold;
         font-size: 1.6rem;
         line-height: 147.8%;
         letter-spacing: 0.1em;
@@ -109,17 +109,17 @@ export default {
 
     h4 {
         color: $dark;
-        font-weight: 600;
+        font-family: $graphik-semibold;
         margin-bottom: 0.8rem;
         font-size: 2.1rem;
         line-height: 3.1rem;
     }
 
     p {
+        font-family: $graphik-regular;
         margin-bottom: 5rem;
         max-width: 55.7rem;
         font-style: normal;
-        font-weight: normal;
         font-size: 2.1rem;
         line-height: 3.1rem;
         color: $grey3;
@@ -128,6 +128,8 @@ export default {
     span {
         color: $dark;
         line-height: 3.1rem;
+        font-family: $graphik-regular;
+        font-style: normal;
     }
 
     .About__experiences {

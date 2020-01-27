@@ -63,7 +63,9 @@ export default {
         position: relative;
         margin-right: 100px;
         font-size: 22px;
-        font-family: 'Inter-Bold';
+        letter-spacing: 0.1em;
+        font-family: $graphik-semibold;
+        text-transform: uppercase;
         display: inline-block;
         overflow: hidden;
         transition: all 0.5s ease;

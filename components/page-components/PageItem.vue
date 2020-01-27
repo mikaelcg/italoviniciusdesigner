@@ -1,5 +1,5 @@
 <template>
-    <div class="PageItem">
+    <div id="PageItemId" class="PageItem">
         <v-container :class="[{ reverse: reverse }]">
             <div :data-aos="getImageAnimation()" class="PageItem__image">
                 <slot name="PageItemImage"></slot>
@@ -45,7 +45,15 @@ export default {
         }
     },
     data: () => ({}),
-    computed: {},
+    computed: {
+        scrollOptions() {
+            return {
+                duration: 1000,
+                offset: 0,
+                easing: 'easeInOutCubic'
+            }
+        }
+    },
     watch: {},
     created() {},
     mounted() {},
@@ -89,7 +97,7 @@ export default {
                 display: flex;
 
                 span {
-                    font-weight: 600;
+                    font-family: $graphik-semibold;
                     font-size: 1.4rem;
                     line-height: 2rem;
                     letter-spacing: 0.1em;
@@ -110,8 +118,8 @@ export default {
             }
 
             &-description {
+                font-family: $graphik-regular;
                 font-style: normal;
-                font-weight: normal;
                 font-size: 2.1rem;
                 line-height: 3.1rem;
                 color: $grey3;
