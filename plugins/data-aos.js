@@ -3,5 +3,5 @@ import 'aos/dist/aos.css' // You can also use <link> for styles
 // ..
 AOS.init({
     once: false,
-    offset: 300
+    offset: 120
 })

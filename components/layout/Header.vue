@@ -3,19 +3,19 @@
         <v-container>
             <a
                 :class="[{ active: activeOption === 'home' }]"
-                @click="$vuetify.goTo('.PageHeader', options)"
+                @click="$vuetify.goTo('.PageHeader', scrollOptions)"
                 href="javascript:void(0)"
                 >INÍCIO</a
             >
             <a
                 :class="[{ active: activeOption === 'work' }]"
-                @click="$vuetify.goTo('.PageItem', options)"
+                @click="$vuetify.goTo('.PageItem', scrollOptions)"
                 href="javascript:void(0)"
                 >TRABALHOS</a
             >
             <a
                 :class="[{ active: activeOption === 'about' }]"
-                @click="$vuetify.goTo('.About', options)"
+                @click="$vuetify.goTo('.About', scrollOptions)"
                 href="javascript:void(0)"
                 >SOBRE</a
             >
@@ -52,14 +52,17 @@ export default {
             return {
                 duration: 1000,
                 offset: 0,
-                easing: 'easeInOutCubic'
+                easing: 'easeInOutCubic',
+                behavior: 'smooth'
             }
         }
     },
     watch: {},
     created() {},
     mounted() {},
-    methods: {}
+    methods: {
+        // goTo
+    }
 }
 </script>
 

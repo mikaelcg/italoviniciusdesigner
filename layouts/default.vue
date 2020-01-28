@@ -53,7 +53,7 @@ export default {
         },
 
         checkIfHasScrolled() {
-            if (window.pageYOffset > 80) {
+            if (window.pageYOffset > 30) {
                 return (this.hasScrolled = true)
             }
             return (this.hasScrolled = false)
