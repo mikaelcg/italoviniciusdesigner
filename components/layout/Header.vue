@@ -1,17 +1,20 @@
 <template>
-    <header class="Header">
+    <header :class="['Header', { fixed: fixed }, { white: white }]">
         <v-container>
             <a
+                :class="[{ active: activeOption === 'home' }]"
                 @click="$vuetify.goTo('.PageHeader', options)"
                 href="javascript:void(0)"
                 >INÍCIO</a
             >
             <a
+                :class="[{ active: activeOption === 'work' }]"
                 @click="$vuetify.goTo('.PageItem', options)"
                 href="javascript:void(0)"
                 >TRABALHOS</a
             >
             <a
+                :class="[{ active: activeOption === 'about' }]"
                 @click="$vuetify.goTo('.About', options)"
                 href="javascript:void(0)"
                 >SOBRE</a
@@ -26,7 +29,23 @@
 export default {
     name: 'Header',
     components: {},
-    props: {},
+    props: {
+        fixed: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        white: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        activeOption: {
+            type: String,
+            required: true,
+            default: 'home'
+        }
+    },
     data: () => ({}),
     computed: {
         scrollOptions() {
@@ -53,11 +72,32 @@ export default {
     align-items: center;
     height: 8rem;
     background-color: $dark;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 10;
+
+    &.fixed {
+        position: fixed;
+    }
+
+    &.white {
+        background-color: $white;
+
+        a {
+            color: $grey3;
+
+            &:hover,
+            &.active {
+                color: $dark;
+
+                &:before {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
 
     a {
         position: relative;
@@ -71,14 +111,6 @@ export default {
         transition: all 0.5s ease;
         color: $grey1;
 
-        &.nuxt-link-exact-active {
-            color: $grey2;
-
-            &:before {
-                transform: translateX(0);
-            }
-        }
-
         &:before {
             content: '';
             position: absolute;
@@ -91,7 +123,8 @@ export default {
             transform: translateX(-100%);
         }
 
-        &:hover {
+        &:hover,
+        &.active {
             color: $grey2;
 
             &:before {
