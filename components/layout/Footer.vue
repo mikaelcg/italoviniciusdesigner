@@ -9,7 +9,7 @@
             <v-divider dark></v-divider>
 
             <div class="Footer__links">
-                <span> © {{ currentYear }} Ítalo Vinícus </span>
+                <span>© {{ currentYear }} Ítalo Vinícus</span>
 
                 <div class="Footer__links-icons">
                     <v-tooltip
@@ -66,56 +66,60 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/assets/variables.scss';
-.Footer {
-    &__content {
-        padding: 10rem 0;
+footer {
+    background-color: $dark;
 
-        h3 {
-            font-style: normal;
-            font-family: $acta-display-bold;
-            font-size: 3.6rem;
-            line-height: 147.8%;
-            color: $grey2;
-        }
+    .Footer {
+        &__content {
+            padding: 10rem 0;
 
-        span {
-            font-style: normal;
-            font-family: $graphik-regular;
-            font-size: 2.1rem;
-            line-height: 3.1rem;
-            color: $grey1;
-            margin-top: 3rem;
-        }
-    }
+            h3 {
+                font-style: normal;
+                font-family: $acta-display-bold;
+                font-size: 3.6rem;
+                line-height: 147.8%;
+                color: $grey2;
+            }
 
-    &__links {
-        padding: 5rem 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        > span {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 1.6rem;
-            line-height: 147.8%;
-
-            color: #595959;
-        }
-
-        &-icons {
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-
-            > i {
+            span {
+                font-style: normal;
+                font-family: $graphik-regular;
+                font-size: 2.1rem;
+                line-height: 3.1rem;
                 color: $grey1;
-                margin-left: 3rem;
+                margin-top: 3rem;
+            }
+        }
 
-                &:hover {
-                    color: $gold;
-                    transition: color 0.3s;
-                    cursor: pointer;
+        &__links {
+            padding: 5rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            > span {
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.6rem;
+                line-height: 147.8%;
+
+                color: #595959;
+            }
+
+            &-icons {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                > i {
+                    color: $grey1;
+                    margin-left: 3rem;
+
+                    &:hover {
+                        color: $gold;
+                        transition: color 0.3s;
+                        cursor: pointer;
+                    }
                 }
             }
         }

@@ -45,7 +45,7 @@
 
 <script>
 // import { mapActions, mapGetters, mapState } from 'vuex'
-
+import AOS from 'aos'
 export default {
     name: 'PageHeader',
     components: {},
@@ -69,7 +69,9 @@ export default {
     },
     watch: {},
     created() {},
-    mounted() {},
+    mounted() {
+        AOS.refreshHard()
+    },
     methods: {}
 }
 </script>
@@ -78,12 +80,12 @@ export default {
 @import '@/assets/variables.scss';
 
 .PageHeader {
+    background: $dark;
     > div {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         align-items: flex-start;
-        padding: 8rem 1.2rem 1.2rem 1.2rem;
 
         .PageHeader__content {
             display: flex;
@@ -132,6 +134,14 @@ export default {
             }
 
             .PageHeader__content-image {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
             }
         }
 
@@ -160,6 +170,7 @@ export default {
         transform: translateY(10px);
     }
 }
+
 @keyframes slide-bottom {
     0% {
         -webkit-transform: translateY(0);

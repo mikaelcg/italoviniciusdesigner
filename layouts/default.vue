@@ -1,14 +1,17 @@
 <template>
     <v-app class="App">
-        <Header></Header>
-        <transition name="showMenu">
-            <Header
-                v-if="hasScrolled"
-                :fixed="hasScrolled"
-                :white="whiteFixedTopMenu"
-                :activeOption="activeMenuOption"
-            ></Header>
-        </transition>
+        <template v-if="!isMobile">
+            <Header></Header>
+            <transition name="showMenu">
+                <Header
+                    v-if="hasScrolled"
+                    :fixed="hasScrolled"
+                    :white="whiteFixedTopMenu"
+                    :activeOption="activeMenuOption"
+                ></Header>
+            </transition>
+        </template>
+        <HeaderMobile v-else></HeaderMobile>
         <v-content class="App__content">
             <nuxt />
         </v-content>
@@ -18,7 +21,9 @@
 
 <script>
 // import { mapActions, mapGetters, mapState } from 'vuex'
+
 import Header from '@/components/layout/Header'
+import HeaderMobile from '@/components/layout/HeaderMobile'
 import Footer from '@/components/layout/Footer'
 
 export default {
@@ -26,30 +31,41 @@ export default {
 
     components: {
         Header,
-        Footer
+        Footer,
+        HeaderMobile
     },
     props: {},
     data: () => ({
         hasScrolled: false,
         whiteFixedTopMenu: false,
-        activeMenuOption: 'home'
+        activeMenuOption: 'home',
+        isMobile: null
     }),
     computed: {},
     watch: {},
     created() {},
     mounted() {
         this.watchScroll()
+        this.watchWidth()
     },
     destroyed() {
         this.destroyWatchScroll()
+        this.destroyWatchWidth()
     },
     methods: {
         watchScroll() {
             window.addEventListener('scroll', this.handleScroll)
         },
+        watchWidth() {
+            window.addEventListener('resize', this.handleResize)
+            this.handleResize()
+        },
 
         destroyWatchScroll() {
             window.removeEventListener('scroll', this.handleScroll)
+        },
+        destroyWatchwWidth() {
+            window.removeEventListener('resize', this.handleResize)
         },
 
         checkIfHasScrolled() {
@@ -86,6 +102,13 @@ export default {
             this.checkTopMenuBackgroundColor()
 
             this.checkActiveOption()
+        },
+
+        handleResize(event) {
+            if (window.innerWidth <= 768) {
+                return (this.isMobile = true)
+            }
+            return (this.isMobile = false)
         }
     }
 }
@@ -94,7 +117,7 @@ export default {
 <style lang="scss" scoped>
 // @import '@/assets/variables.scss';
 .App {
-    background-color: $dark;
+    // background-color: $dark;
 }
 
 .showMenu-enter-active,

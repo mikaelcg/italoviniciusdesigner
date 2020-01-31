@@ -92,6 +92,13 @@ export default {
             flex-direction: row-reverse;
         }
 
+        .PageItem__image {
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
         .PageItem__text {
             &-title {
                 display: flex;
@@ -126,6 +133,16 @@ export default {
                 max-width: 33rem;
                 margin: 5rem 0;
             }
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column !important;
+            justify-content: center;
+            align-items: center;
         }
     }
 }

@@ -42,7 +42,7 @@ export default {
         },
         activeOption: {
             type: String,
-            required: true,
+            required: false,
             default: 'home'
         }
     },

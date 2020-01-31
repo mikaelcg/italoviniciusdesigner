@@ -1,9 +1,7 @@
 <template>
     <div class="Home">
         <PageHeader>
-            <template v-slot:PageHeaderTitle>
-                ÍTALO VINÍCIUS
-            </template>
+            <template v-slot:PageHeaderTitle> ÍTALO VINÍCIUS </template>
             <template v-slot:PageHeaderSubtitle>
                 UX DESIGNER
             </template>
