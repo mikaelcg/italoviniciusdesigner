@@ -1,5 +1,10 @@
 <template>
-    <div :class="{ backgroundColorGrey: backgroundColorGrey }">
+    <div
+        :class="{
+            backgroundColorGrey: backgroundColorGrey,
+            backgroundColorBlue: backgroundColorBlue
+        }"
+    >
         <v-container class="PageItemText">
             <h3 class="PageItemText__title">
                 <slot name="PageItemTextTitle"></slot>
@@ -8,6 +13,8 @@
             <p class="PageItemText__text">
                 <slot name="PageItemText"></slot>
             </p>
+
+            <slot name="PageItemTextContent"></slot>
         </v-container>
     </div>
 </template>
@@ -18,6 +25,10 @@ export default {
     components: {},
     props: {
         backgroundColorGrey: {
+            type: Boolean,
+            required: false
+        },
+        backgroundColorBlue: {
             type: Boolean,
             required: false
         }
@@ -67,5 +78,16 @@ export default {
 
 .backgroundColorGrey {
     background-color: $grey0;
+}
+
+.backgroundColorBlue {
+    background-color: #0a2c4f;
+
+    .PageItemText {
+        &__title,
+        &__text {
+            color: #fff;
+        }
+    }
 }
 </style>
