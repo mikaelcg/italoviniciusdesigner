@@ -15,6 +15,18 @@
     font-family: 'Graphik-Semibold';
     src: url('@/../fonts/Graphik/Graphik-600-Semibold.otf');
 }
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('@/../fonts/OpenSans/OpenSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'OpenSans-Semibold';
+    src: url('@/../fonts/OpenSans/OpenSans-Semibold.ttf');
+}
+@font-face {
+    font-family: 'OpenSans-Bold';
+    src: url('@/../fonts/OpenSans/OpenSans-Bold.ttf');
+}
 
 html {
     /* 1rem = 10px */

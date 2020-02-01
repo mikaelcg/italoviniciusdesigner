@@ -25,7 +25,7 @@
                     <slot name="PageItemDescription"></slot>
                 </p>
                 <div class="PageItem__text-action">
-                    <p>Ver projeto</p>
+                    <nuxt-link :to="to">VER PROJETO</nuxt-link>
                 </div>
             </div>
         </v-container>
@@ -33,14 +33,17 @@
 </template>
 
 <script>
-// import { mapActions, mapGetters, mapState } from 'vuex'
-
 export default {
-    name: 'PageItem',
+    name: 'IndexPageItem',
     components: {},
     props: {
         reverse: {
             type: Boolean,
+            required: true
+        },
+
+        to: {
+            type: String,
             required: true
         }
     },
@@ -132,6 +135,22 @@ export default {
                 color: $grey3;
                 max-width: 33rem;
                 margin: 5rem 0;
+            }
+
+            &-action {
+                > a {
+                    font-family: $opensans-bold;
+                    font-style: normal;
+                    font-size: 1.2rem;
+                    line-height: 147.8%;
+                    letter-spacing: 0.1em;
+                    color: $grey1;
+
+                    &:hover {
+                        transition: all 0.3s;
+                        color: $gold;
+                    }
+                }
             }
 
             @media screen and (max-width: 768px) {

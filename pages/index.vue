@@ -1,6 +1,6 @@
 <template>
     <div class="Home">
-        <PageHeader>
+        <IndexPageHeader>
             <template v-slot:PageHeaderTitle> ÍTALO VINÍCIUS </template>
             <template v-slot:PageHeaderSubtitle>
                 UX DESIGNER
@@ -12,12 +12,13 @@
             <template v-slot:PageHeaderImage>
                 <img src="Home/Italo_Vinicius.png" alt="Ítalo Vinícius" />
             </template>
-        </PageHeader>
+        </IndexPageHeader>
 
-        <PageItem
+        <IndexPageItem
             v-for="(item, index) in pageItems"
             :key="index"
             :reverse="item.reverse"
+            :to="item.to"
         >
             <template v-slot:PageItemImage>
                 <img :src="item.imageUrl" :alt="item.title" />
@@ -27,7 +28,7 @@
             <template v-slot:PageItemDescription>
                 {{ item.description }}
             </template>
-        </PageItem>
+        </IndexPageItem>
 
         <About></About>
     </div>
@@ -35,12 +36,13 @@
 
 <script>
 // import { mapActions, mapGetters, mapState } from 'vuex'
-import PageHeader from '@/components/page-components/PageHeader'
-import PageItem from '@/components/page-components/PageItem'
-import About from '@/components/page-components/About'
+import IndexPageHeader from '@/components/index-page-components/IndexPageHeader'
+import IndexPageItem from '@/components/index-page-components/IndexPageItem'
+import About from '@/components/index-page-components/About'
+
 export default {
     name: 'Home',
-    components: { PageHeader, PageItem, About },
+    components: { IndexPageHeader, IndexPageItem, About },
     props: {},
     data: () => ({
         pageItems: [

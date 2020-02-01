@@ -8,25 +8,15 @@
                         data-aos="fade-right"
                         data-aos-duration="800"
                     >
-                        <div class="Text__title">
-                            <h1>
-                                <slot name="PageHeaderTitle"></slot>
-                            </h1>
+                        <h1>
+                            <slot name="PageHeaderTitle"></slot>
+                        </h1>
 
-                            <span>/</span>
+                        <span>/</span>
 
-                            <h2>
-                                <slot name="PageHeaderSubtitle"></slot>
-                            </h2>
-                        </div>
-
-                        <div class="Text__year">
-                            <span>ANO</span>
-                            <span>/</span>
-                            <span>
-                                <slot name="PageHeaderYear"></slot>
-                            </span>
-                        </div>
+                        <h2>
+                            <slot name="PageHeaderSubtitle"></slot>
+                        </h2>
                     </div>
 
                     <p
@@ -36,10 +26,10 @@
                         <slot name="PageHeaderDescription"></slot>
                     </p>
                 </div>
-            </div>
 
-            <div class="PageHeader__content-image">
-                <slot name="PageHeaderImage"></slot>
+                <div class="PageHeader__content-image">
+                    <slot name="PageHeaderImage"></slot>
+                </div>
             </div>
 
             <div
@@ -54,10 +44,9 @@
 </template>
 
 <script>
-// import { mapActions, mapGetters, mapState } from 'vuex'
 import AOS from 'aos'
 export default {
-    name: 'PageHeader',
+    name: 'IndexPageHeader',
     components: {},
     props: {},
     data: () => ({
@@ -103,66 +92,33 @@ export default {
             align-items: center;
             position: relative;
             width: 100%;
-            min-height: 63rem;
 
             .PageHeader__content-text {
                 .PageHeader__content-text-title {
                     display: flex;
-                    align-items: flex-end;
 
-                    .Text__title {
-                        display: flex;
-
-                        > h1,
-                        h2,
-                        span {
-                            font-weight: 600;
-                            font-size: 1.4rem;
-                            line-height: 2rem;
-                            letter-spacing: 0.1em;
-                            font-family: $graphik-regular;
-                            letter-spacing: 0.1em;
-                        }
-
-                        h1 {
-                            color: $grey1;
-                        }
-
-                        h2 {
-                            color: $grey2;
-                        }
-
-                        > span {
-                            color: $gold;
-                            margin: 0 1rem;
-                        }
+                    > h1,
+                    h2,
+                    span {
+                        font-weight: 600;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.1em;
+                        font-family: $graphik-regular;
+                        letter-spacing: 0.1em;
                     }
 
-                    .Text__year {
-                        display: flex;
-                        margin-left: 4rem;
+                    h1 {
+                        color: $grey2;
+                    }
 
-                        span {
-                            font-weight: 600;
-                            font-size: 1.4rem;
-                            line-height: 2rem;
-                            letter-spacing: 0.1em;
-                            font-family: $graphik-regular;
-                            letter-spacing: 0.1em;
+                    h2 {
+                        color: $grey1;
+                    }
 
-                            &:nth-child(1) {
-                                color: $grey1;
-                            }
-
-                            &:nth-child(3) {
-                                color: $grey2;
-                            }
-
-                            &:nth-child(2) {
-                                color: $gold;
-                                margin: 0 1rem;
-                            }
-                        }
+                    > span {
+                        color: $gold;
+                        margin: 0 1rem;
                     }
                 }
 
@@ -176,21 +132,15 @@ export default {
                 }
             }
 
-            @media screen and (max-width: 768px) {
-                min-height: 0;
-            }
-        }
-        .PageHeader__content-image {
-            position: absolute;
-            right: 0;
+            .PageHeader__content-image {
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
 
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            @media screen and (max-width: 768px) {
-                display: none;
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
             }
         }
 
