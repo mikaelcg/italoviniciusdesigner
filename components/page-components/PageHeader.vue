@@ -1,5 +1,10 @@
 <template>
-    <div class="PageHeader">
+    <div
+        :class="[
+            'PageHeader',
+            { backgroundColorDarkGrey: backgroundColorDarkGrey }
+        ]"
+    >
         <v-container>
             <div class="PageHeader__content">
                 <div class="PageHeader__content-text">
@@ -59,16 +64,15 @@ import AOS from 'aos'
 export default {
     name: 'PageHeader',
     components: {},
-    props: {},
+    props: {
+        backgroundColorDarkGrey: {
+            type: Boolean
+        }
+    },
     data: () => ({
-        target: '.PageItem'
+        target: '.PageItemTextContent'
     }),
     computed: {
-        scrollTarget() {
-            const value = this[this.type]
-            if (!isNaN(value)) return Number(value)
-            else return value
-        },
         scrollOptions() {
             return {
                 duration: 1000,
@@ -91,6 +95,7 @@ export default {
 
 .PageHeader {
     background: $dark;
+
     > div {
         display: flex;
         flex-direction: column;
@@ -204,6 +209,36 @@ export default {
                     1s;
                 cursor: pointer;
                 margin-bottom: 5rem;
+            }
+        }
+    }
+
+    &.backgroundColorDarkGrey {
+        background: #ebebeb;
+
+        > div {
+            .PageHeader__content {
+                .PageHeader__content-text {
+                    .PageHeader__content-text-title {
+                        .Text__title {
+                            h2 {
+                                color: $dark;
+                            }
+                        }
+
+                        .Text__year {
+                            span {
+                                &:nth-child(3) {
+                                    color: $dark;
+                                }
+                            }
+                        }
+                    }
+
+                    .PageHeader__content-text-description {
+                        color: $dark;
+                    }
+                }
             }
         }
     }

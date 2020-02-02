@@ -4,9 +4,9 @@
             <template v-slot:PageHeaderTitle>AGNI</template>
             <template v-slot:PageHeaderSubtitle>APLICATIVO</template>
             <template v-slot:PageHeaderYear>2019</template>
-            <template v-slot:PageHeaderDescription
-                >Um projeto desenvolvido no NASA Space Apps.</template
-            >
+            <template v-slot:PageHeaderDescription>
+                Um projeto desenvolvido no NASA Space Apps
+            </template>
             <template v-slot:PageHeaderImage>
                 <img src="Agni/Agni_header.png" alt="Agni App" />
             </template>

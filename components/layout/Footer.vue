@@ -6,9 +6,22 @@
                     <h3>Tem um projeto? Vamos conversar.</h3>
                     <span>ola@italovinicius.com</span>
                 </div>
+
                 <div v-if="$route.name === 'agni'" class="agni">
                     <nuxt-link to="/novo-menu"
                         >NOVO MENU <v-icon>mdi-arrow-right</v-icon></nuxt-link
+                    >
+                </div>
+
+                <div
+                    v-if="$route.name === 'ummense-novo-menu'"
+                    class="ummense-novo-menu"
+                >
+                    <nuxt-link to="/agni">
+                        <v-icon>mdi-arrow-left</v-icon>AGNI</nuxt-link
+                    >
+                    <nuxt-link to="/ummense-novo-site"
+                        >NOVO SITE <v-icon>mdi-arrow-right</v-icon></nuxt-link
                     >
                 </div>
             </div>
@@ -116,6 +129,40 @@ footer {
 
                     > i {
                         color: $gold;
+                        margin-left: 1.2rem;
+                    }
+                }
+            }
+
+            .ummense-novo-menu {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 5rem 0;
+
+                a {
+                    font-family: $graphik-semibold;
+                    font-style: normal;
+                    font-size: 1.4rem;
+                    line-height: 147.8%;
+                    text-align: right;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #fff;
+
+                    > i {
+                        color: $gold;
+                    }
+
+                    &:first-child {
+                        > i {
+                            margin-right: 1.2rem;
+                        }
+                    }
+                    &:last-child {
+                        > i {
+                            margin-left: 1.2rem;
+                        }
                     }
                 }
             }

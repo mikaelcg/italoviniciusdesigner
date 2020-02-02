@@ -1,5 +1,12 @@
 <template>
-    <header :class="['Header', { fixed: fixed }, { white: white }]">
+    <header
+        :class="[
+            'Header',
+            { fixed: fixed },
+            { white: white },
+            { 'novo-menu': this.$route.name === 'ummense-novo-menu' }
+        ]"
+    >
         <v-container>
             <a
                 :class="[
@@ -83,7 +90,10 @@ export default {
             if (this.$route.name === 'index') {
                 this.$vuetify.goTo(goTo, this.scrollOptions)
             } else {
-                this.$router.push({ name: 'index', hash: goTo })
+                this.$router.push({ name: 'index' })
+                setTimeout(() => {
+                    this.$vuetify.goTo(goTo, this.scrollOptions)
+                }, 1000)
             }
         }
     }
@@ -156,6 +166,21 @@ export default {
 
             &:before {
                 transform: translateX(0);
+            }
+        }
+    }
+
+    &.novo-menu {
+        background-color: #ebebeb;
+
+        a {
+            &:hover,
+            &.active {
+                color: $dark;
+
+                &:before {
+                    transform: translateX(0);
+                }
             }
         }
     }

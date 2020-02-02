@@ -45,9 +45,6 @@ export default {
     watch: {},
     created() {},
     mounted() {
-        if (this.$route.hash) {
-            setTimeout(() => this.scrollTo(this.$route.hash), 1)
-        }
         this.watchScroll()
         this.watchWidth()
     },
@@ -112,12 +109,6 @@ export default {
                 return (this.isMobile = true)
             }
             return (this.isMobile = false)
-        },
-
-        scrollTo(hashtag) {
-            setTimeout(() => {
-                location.href = hashtag
-            }, 1)
         }
     }
 }

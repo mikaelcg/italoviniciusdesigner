@@ -1,9 +1,13 @@
 <template>
     <div
-        :class="{
-            backgroundColorGrey: backgroundColorGrey,
-            backgroundColorBlue: backgroundColorBlue
-        }"
+        :class="[
+            'PageItemTextContent',
+            {
+                backgroundColorGrey: backgroundColorGrey,
+                backgroundColorBlue: backgroundColorBlue,
+                backgroundColorDarkGrey: backgroundColorDarkGrey
+            }
+        ]"
     >
         <v-container class="PageItemText">
             <h3 class="PageItemText__title">
@@ -25,6 +29,10 @@ export default {
     components: {},
     props: {
         backgroundColorGrey: {
+            type: Boolean,
+            required: false
+        },
+        backgroundColorDarkGrey: {
             type: Boolean,
             required: false
         },
@@ -89,5 +97,9 @@ export default {
             color: #fff;
         }
     }
+}
+
+.backgroundColorDarkGrey {
+    background-color: #ebebeb;
 }
 </style>
