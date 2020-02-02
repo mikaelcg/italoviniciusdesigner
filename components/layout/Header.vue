@@ -2,19 +2,37 @@
     <header :class="['Header', { fixed: fixed }, { white: white }]">
         <v-container>
             <a
-                :class="[{ active: activeOption === 'home' }]"
-                @click="$vuetify.goTo('.PageHeader', scrollOptions)"
+                :class="[
+                    {
+                        active:
+                            activeOption === 'home' &&
+                            this.$route.name === 'index'
+                    }
+                ]"
+                @click="handleMenuClick('#PageHeaderId')"
                 href="javascript:void(0)"
                 >INÍCIO</a
             >
             <a
-                :class="[{ active: activeOption === 'work' }]"
-                @click="$vuetify.goTo('.PageItem', scrollOptions)"
+                :class="[
+                    {
+                        active:
+                            activeOption === 'work' &&
+                            this.$route.name === 'index'
+                    }
+                ]"
+                @click="handleMenuClick('#PageItemId')"
                 href="javascript:void(0)"
                 >TRABALHOS</a
             >
             <a
-                :class="[{ active: activeOption === 'about' }]"
+                :class="[
+                    {
+                        active:
+                            activeOption === 'about' &&
+                            this.$route.name === 'index'
+                    }
+                ]"
                 @click="$vuetify.goTo('.About', scrollOptions)"
                 href="javascript:void(0)"
                 >SOBRE</a
@@ -61,7 +79,13 @@ export default {
     created() {},
     mounted() {},
     methods: {
-        // goTo
+        handleMenuClick(goTo) {
+            if (this.$route.name === 'index') {
+                this.$vuetify.goTo(goTo, this.scrollOptions)
+            } else {
+                this.$router.push({ name: 'index', hash: goTo })
+            }
+        }
     }
 }
 </script>

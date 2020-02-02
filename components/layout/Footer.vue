@@ -2,8 +2,15 @@
     <footer>
         <v-container class="Footer">
             <div class="Footer__content">
-                <h3>Tem um projeto? Vamos conversar.</h3>
-                <span>ola@italovinicius.com</span>
+                <div v-if="$route.name === 'index'" class="index">
+                    <h3>Tem um projeto? Vamos conversar.</h3>
+                    <span>ola@italovinicius.com</span>
+                </div>
+                <div v-if="$route.name === 'agni'" class="agni">
+                    <nuxt-link to="/novo-menu"
+                        >NOVO MENU <v-icon>mdi-arrow-right</v-icon></nuxt-link
+                    >
+                </div>
             </div>
 
             <v-divider dark></v-divider>
@@ -71,23 +78,46 @@ footer {
 
     .Footer {
         &__content {
-            padding: 10rem 0;
+            .index {
+                padding: 10rem 0;
+                h3 {
+                    font-style: normal;
+                    font-family: $acta-display-bold;
+                    font-size: 3.6rem;
+                    line-height: 147.8%;
+                    color: $grey2;
+                }
 
-            h3 {
-                font-style: normal;
-                font-family: $acta-display-bold;
-                font-size: 3.6rem;
-                line-height: 147.8%;
-                color: $grey2;
+                span {
+                    font-style: normal;
+                    font-family: $graphik-regular;
+                    font-size: 2.1rem;
+                    line-height: 3.1rem;
+                    color: $grey1;
+                    margin-top: 3rem;
+                }
             }
 
-            span {
-                font-style: normal;
-                font-family: $graphik-regular;
-                font-size: 2.1rem;
-                line-height: 3.1rem;
-                color: $grey1;
-                margin-top: 3rem;
+            .agni {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                padding: 5rem 0;
+
+                a {
+                    font-family: $graphik-semibold;
+                    font-style: normal;
+                    font-size: 1.4rem;
+                    line-height: 147.8%;
+                    text-align: right;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #fff;
+
+                    > i {
+                        color: $gold;
+                    }
+                }
             }
         }
 

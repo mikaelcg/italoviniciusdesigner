@@ -1,5 +1,5 @@
 <template>
-    <div class="PageHeader">
+    <div id="PageHeaderId" class="PageHeader">
         <v-container>
             <div class="PageHeader__content">
                 <div class="PageHeader__content-text">

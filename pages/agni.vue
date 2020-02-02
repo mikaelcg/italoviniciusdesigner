@@ -303,7 +303,6 @@ export default {
 
             @media screen and (max-width: 768px) {
                 flex-direction: column;
-                padding: 5rem 1.2rem;
             }
         }
 
