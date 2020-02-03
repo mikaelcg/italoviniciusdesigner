@@ -2,7 +2,8 @@
     <div
         :class="[
             'PageHeader',
-            { backgroundColorDarkGrey: backgroundColorDarkGrey }
+            { backgroundColorDarkGrey: backgroundColorDarkGrey },
+            { backgroundColorGrey: backgroundColorGrey }
         ]"
     >
         <v-container>
@@ -41,10 +42,15 @@
                         <slot name="PageHeaderDescription"></slot>
                     </p>
                 </div>
-            </div>
 
-            <div class="PageHeader__content-image">
-                <slot name="PageHeaderImage"></slot>
+                <div
+                    :class="[
+                        'PageHeader__content-image',
+                        { novoSite: novoSite }
+                    ]"
+                >
+                    <slot name="PageHeaderImage"></slot>
+                </div>
             </div>
 
             <div
@@ -66,6 +72,12 @@ export default {
     components: {},
     props: {
         backgroundColorDarkGrey: {
+            type: Boolean
+        },
+        backgroundColorGrey: {
+            type: Boolean
+        },
+        novoSite: {
             type: Boolean
         }
     },
@@ -106,7 +118,7 @@ export default {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: relative;
+            // position: relative;
             width: 100%;
             min-height: 63rem;
 
@@ -181,21 +193,27 @@ export default {
                 }
             }
 
+            .PageHeader__content-image {
+                position: absolute;
+                right: 0;
+
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                &.novoSite {
+                    position: relative;
+                    top: 10rem;
+                }
+
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+
             @media screen and (max-width: 768px) {
                 min-height: 0;
-            }
-        }
-        .PageHeader__content-image {
-            position: absolute;
-            right: 0;
-
-            img {
-                max-width: 100%;
-                height: auto;
-            }
-
-            @media screen and (max-width: 768px) {
-                display: none;
             }
         }
 
@@ -215,6 +233,36 @@ export default {
 
     &.backgroundColorDarkGrey {
         background: #ebebeb;
+
+        > div {
+            .PageHeader__content {
+                .PageHeader__content-text {
+                    .PageHeader__content-text-title {
+                        .Text__title {
+                            h2 {
+                                color: $dark;
+                            }
+                        }
+
+                        .Text__year {
+                            span {
+                                &:nth-child(3) {
+                                    color: $dark;
+                                }
+                            }
+                        }
+                    }
+
+                    .PageHeader__content-text-description {
+                        color: $dark;
+                    }
+                }
+            }
+        }
+    }
+
+    &.backgroundColorGrey {
+        background: #f1f1f1;
 
         > div {
             .PageHeader__content {
