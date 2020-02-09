@@ -24,6 +24,18 @@
                         >NOVO SITE <v-icon>mdi-arrow-right</v-icon></nuxt-link
                     >
                 </div>
+
+                <div
+                    v-if="$route.name === 'ummense-novo-site'"
+                    class="ummense-novo-site"
+                >
+                    <nuxt-link to="/ummense-novo-menu">
+                        <v-icon>mdi-arrow-left</v-icon>NOVO MENU</nuxt-link
+                    >
+                    <nuxt-link to="/ummense-cadastro"
+                        >CADASTRO <v-icon>mdi-arrow-right</v-icon></nuxt-link
+                    >
+                </div>
             </div>
 
             <v-divider dark></v-divider>
@@ -134,7 +146,8 @@ footer {
                 }
             }
 
-            .ummense-novo-menu {
+            .ummense-novo-menu,
+            .ummense-novo-site {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;

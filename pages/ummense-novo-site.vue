@@ -1,7 +1,7 @@
 <template>
     <div class="UmmenseNovoSite">
-        <PageHeader :backgroundColorGrey="true" :novoSite="true"
-            ><template v-slot:PageHeaderTitle>UMMENSE</template>
+        <PageHeader :backgroundColorGrey="true" :novoSite="true">
+            <template v-slot:PageHeaderTitle>UMMENSE</template>
             <template v-slot:PageHeaderSubtitle>APLICATIVO</template>
             <template v-slot:PageHeaderYear>2019</template>
             <template v-slot:PageHeaderDescription>
@@ -24,8 +24,9 @@
                 Com ela você consegue criar fluxos completos de uma empresa,
                 como comercial, administrativo ou financeiro por exemplo, e
                 desenvolver um projeto que se integre suas etapas em todos eles
-                simultaneamente.<br /><br />
-                Ainda é possível criar diversas automações, formulários
+                simultaneamente.
+                <br />
+                <br />Ainda é possível criar diversas automações, formulários
                 externos, entre outras funções de compartilhamento fácil com o
                 cliente.
             </template>
@@ -55,7 +56,9 @@
                 Desenvolvemos textos mais objetivos, exploramos imagens e
                 distribuímos o conteúdo em páginas, ao invés de uma landing
                 page. Isso contribuiu para uma melhor performance na pesquisa do
-                Google. <br /><br />Este foi o novo fluxo escolhido:
+                Google.
+                <br />
+                <br />Este foi o novo fluxo escolhido:
             </template>
         </PageItemText>
 
@@ -85,6 +88,18 @@
                 bastante.
             </template>
         </PageItemText>
+
+        <div class="PageImage">
+            <img src="Novo-site/Ummense-bottom.png" alt="Ummense" />
+        </div>
+
+        <div class="PageImage">
+            <img src="Novo-site/Ummense-pages-3.png" alt="Ummense - páginas" />
+        </div>
+
+        <div class="PageImage">
+            <img src="Novo-site/Ummense-laptop.png" alt="Ummense" />
+        </div>
     </div>
 </template>
 
@@ -160,5 +175,9 @@ export default {
             top: -90%;
         }
     }
+
+    // .PageImageBackground {
+    //     background-image: url('~static/Novo-site/Ummense-laptop.png');
+    // }
 }
 </style>
