@@ -36,6 +36,15 @@
                         >CADASTRO <v-icon>mdi-arrow-right</v-icon></nuxt-link
                     >
                 </div>
+
+                <div
+                    v-if="$route.name === 'ummense-cadastro'"
+                    class="ummense-cadastro"
+                >
+                    <nuxt-link to="/ummense-novo-site">
+                        <v-icon>mdi-arrow-left</v-icon>NOVO SITE</nuxt-link
+                    >
+                </div>
             </div>
 
             <v-divider dark></v-divider>
@@ -176,6 +185,29 @@ footer {
                         > i {
                             margin-left: 1.2rem;
                         }
+                    }
+                }
+            }
+
+            .ummense-cadastro {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                padding: 5rem 0;
+
+                a {
+                    font-family: $graphik-semibold;
+                    font-style: normal;
+                    font-size: 1.4rem;
+                    line-height: 147.8%;
+                    text-align: right;
+                    letter-spacing: 0.1em;
+                    text-transform: uppercase;
+                    color: #fff;
+
+                    > i {
+                        color: $gold;
+                        margin-right: 1.2rem;
                     }
                 }
             }
