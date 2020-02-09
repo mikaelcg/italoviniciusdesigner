@@ -8,7 +8,7 @@
                 </div>
 
                 <div v-if="$route.name === 'agni'" class="agni">
-                    <nuxt-link to="/novo-menu"
+                    <nuxt-link to="/ummense-novo-menu"
                         >NOVO MENU <v-icon>mdi-arrow-right</v-icon></nuxt-link
                     >
                 </div>

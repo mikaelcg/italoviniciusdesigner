@@ -1,9 +1,15 @@
 <template>
-    <div class="HeaderMobile">
+    <header
+        :class="[
+            'HeaderMobile',
+            { 'novo-menu': this.$route.name === 'ummense-novo-menu' },
+            { 'novo-site': this.$route.name === 'ummense-novo-site' }
+        ]"
+    >
         <v-container>
             <v-icon large>mdi-menu</v-icon>
         </v-container>
-    </div>
+    </header>
 </template>
 
 <script>
@@ -34,9 +40,40 @@ export default {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
     > div {
         > i {
             color: $gold;
+        }
+    }
+
+    &.novo-menu {
+        background-color: #ebebeb;
+
+        a {
+            &:hover,
+            &.active {
+                color: $dark;
+
+                &:before {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    &.novo-site {
+        background-color: #f1f1f1;
+
+        a {
+            &:hover,
+            &.active {
+                color: $dark;
+
+                &:before {
+                    transform: translateX(0);
+                }
+            }
         }
     }
 }

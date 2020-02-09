@@ -3,6 +3,7 @@
         :class="[
             'PageItemTextContent',
             {
+                backgroundColorBlack: backgroundColorBlack,
                 backgroundColorGrey: backgroundColorGrey,
                 backgroundColorBlue: backgroundColorBlue,
                 backgroundColorDarkGrey: backgroundColorDarkGrey
@@ -28,6 +29,10 @@ export default {
     name: 'PageItemText',
     components: {},
     props: {
+        backgroundColorBlack: {
+            type: Boolean,
+            required: false
+        },
         backgroundColorGrey: {
             type: Boolean,
             required: false
@@ -81,6 +86,17 @@ export default {
         color: $grey3;
         width: 100%;
         text-align: left;
+    }
+}
+
+.backgroundColorBlack {
+    background-color: $dark;
+
+    .PageItemText {
+        &__title,
+        &__text {
+            color: #fff;
+        }
     }
 }
 

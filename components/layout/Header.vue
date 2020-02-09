@@ -4,7 +4,8 @@
             'Header',
             { fixed: fixed },
             { white: white },
-            { 'novo-menu': this.$route.name === 'ummense-novo-menu' }
+            { 'novo-menu': this.$route.name === 'ummense-novo-menu' },
+            { 'novo-site': this.$route.name === 'ummense-novo-site' }
         ]"
     >
         <v-container>
@@ -172,6 +173,21 @@ export default {
 
     &.novo-menu {
         background-color: #ebebeb;
+
+        a {
+            &:hover,
+            &.active {
+                color: $dark;
+
+                &:before {
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+    &.novo-site {
+        background-color: #f1f1f1;
 
         a {
             &:hover,
