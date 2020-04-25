@@ -47,7 +47,7 @@ export default {
     data: () => ({
         pageItems: [
             {
-                imageUrl: 'Home/agni.png',
+                imageUrl: 'Home/Agni.png',
                 title: 'AGNI',
                 subtitle: 'APLICATIVO',
                 description: 'Projeto finalista do NASA Space Apps 2019',
@@ -78,7 +78,7 @@ export default {
                 subtitle: 'NOVO FORMULÁRIO',
                 description:
                     'Um formulário de cadastro com um novo fluxo e um novo visual, o que gerou mais adesão.',
-                to: '/ummense-novo-formulario',
+                to: '/ummense-cadastro',
                 reverse: true
             }
         ]
