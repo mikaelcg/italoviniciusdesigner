@@ -140,7 +140,7 @@ export default {
     a {
         position: relative;
         margin-right: 100px;
-        font-size: 22px;
+        font-size: 14px;
         letter-spacing: 0.1em;
         font-family: $graphik-semibold;
         text-transform: uppercase;
