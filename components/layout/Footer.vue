@@ -53,15 +53,36 @@
                 <span>© {{ currentYear }} Ítalo Vinícus</span>
 
                 <div class="Footer__links-icons">
-                    <v-tooltip
-                        v-for="(icon, index) in footerIcons"
-                        :key="index"
-                        top
-                    >
+                    <v-tooltip top>
                         <template v-slot:activator="{ on }">
-                            <v-icon v-on="on" medium>{{ icon.icon }}</v-icon>
+                            <v-icon v-on="on" medium>mdi-email-outline</v-icon>
                         </template>
-                        <span>{{ icon.name }}</span>
+                        <span>Email</span>
+                    </v-tooltip>
+
+                    <v-tooltip top>
+                        <template v-slot:activator="{ on }">
+                            <div v-on="on" class="IconWrapper">
+                                <LinkedinIcon />
+                            </div>
+                        </template>
+                        <span>Linkedin</span>
+                    </v-tooltip>
+
+                    <v-tooltip top>
+                        <template v-slot:activator="{ on }">
+                            <div v-on="on" class="IconWrapper">
+                                <BehanceIcon />
+                            </div>
+                        </template>
+                        <span>Behance</span>
+                    </v-tooltip>
+
+                    <v-tooltip top>
+                        <template v-slot:activator="{ on }">
+                            <v-icon v-on="on" medium>mdi-instagram</v-icon>
+                        </template>
+                        <span>Instagram</span>
                     </v-tooltip>
                 </div>
             </div>
@@ -71,10 +92,12 @@
 
 <script>
 // import { mapActions, mapGetters, mapState } from 'vuex'
+import BehanceIcon from '@/components/icons/BehanceIcon'
+import LinkedinIcon from '@/components/icons/LinkedinIcon'
 
 export default {
     name: 'Footer',
-    components: {},
+    components: { BehanceIcon, LinkedinIcon },
     props: {},
     data: () => ({
         currentYear: new Date().getFullYear(),
@@ -242,6 +265,13 @@ footer {
                         transition: color 0.3s;
                         cursor: pointer;
                     }
+                }
+
+                .IconWrapper {
+                    display: flex;
+                    margin-left: 3rem;
+                    position: relative;
+                    bottom: 4px;
                 }
             }
         }

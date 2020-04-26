@@ -93,12 +93,16 @@
             <img src="Novo-site/Ummense-bottom.png" alt="Ummense" />
         </div>
 
-        <div class="PageImage">
+        <div class="PageImage bgLightPurple">
             <img src="Novo-site/Ummense-pages-3.png" alt="Ummense - páginas" />
         </div>
 
         <div class="PageImage">
-            <img src="Novo-site/Ummense-laptop.png" alt="Ummense" />
+            <img
+                class="FullWidth"
+                src="Novo-site/Ummense-laptop.png"
+                alt="Ummense Laptop"
+            />
         </div>
     </div>
 </template>
@@ -132,6 +136,10 @@ export default {
         img {
             max-width: 100%;
             height: auto;
+
+            &.FullWidth {
+                width: 100%;
+            }
         }
 
         &.bgGrey {

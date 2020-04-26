@@ -22,10 +22,10 @@
         >
             <template v-slot:PageItemImage>
                 <img
-                    class="Home__ItemImage"
                     @click="goToPage(item.to)"
                     :src="item.imageUrl"
                     :alt="item.title"
+                    class="Home__ItemImage"
                 />
             </template>
             <template v-slot:PageItemTitle>{{ item.title }}</template>
