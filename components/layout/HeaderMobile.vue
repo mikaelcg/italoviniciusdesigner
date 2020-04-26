@@ -35,7 +35,7 @@
             </div>
 
             <div class="Menu Menu__Close">
-                <v-icon large @click="handleShowMenu(false)">mdi-close</v-icon>
+                <v-icon @click="handleShowMenu(false)" large>mdi-close</v-icon>
             </div>
         </div>
     </header>

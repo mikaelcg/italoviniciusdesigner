@@ -6,9 +6,10 @@
                     <h3>VISÃO GERAL</h3>
 
                     <p>
-                        UX/UI designer atuando em Curitiba/PR, trabalho no time
-                        de designers da Ummense, uma plataforma de gestão de
-                        projetos.
+                        Product designer atuando em Curitiba/PR, trabalho no
+                        time de designers da Wiser educacão, holding detentora
+                        das marcas Wise up, Meu Sucesso.com, Number one, Buzz
+                        editora e Power House.
                         <br />
                         <br />
                         Procuro sempre analisar e encontrar o equilíbrio entre a
@@ -52,10 +53,16 @@ export default {
     data: () => ({
         experiences: [
             {
+                title: 'Product Designer',
+                place: 'Wiser Educação',
+                firstDate: 'Março 2020',
+                lastDate: 'Até o momento'
+            },
+            {
                 title: 'UX / UI Designer',
                 place: 'Ummense',
-                firstDate: 'Março 2019',
-                lastDate: 'Até o momento'
+                firstDate: 'Mar 2019',
+                lastDate: 'Mar 2020'
             },
             {
                 title: 'Diretor de Arte',

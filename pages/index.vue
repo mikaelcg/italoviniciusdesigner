@@ -21,7 +21,12 @@
             :to="item.to"
         >
             <template v-slot:PageItemImage>
-                <img :src="item.imageUrl" :alt="item.title" />
+                <img
+                    class="Home__ItemImage"
+                    @click="goToPage(item.to)"
+                    :src="item.imageUrl"
+                    :alt="item.title"
+                />
             </template>
             <template v-slot:PageItemTitle>{{ item.title }}</template>
             <template v-slot:PageItemSubtitle> {{ item.subtitle }}</template>
@@ -87,12 +92,19 @@ export default {
     watch: {},
     created() {},
     mounted() {},
-    methods: {}
+    methods: {
+        goToPage(page) {
+            this.$router.push(page)
+        }
+    }
 }
 </script>
 
 <style lang="scss" scoped>
 // @import '@/assets/variables.scss';
 .Home {
+    &__ItemImage {
+        cursor: pointer;
+    }
 }
 </style>
