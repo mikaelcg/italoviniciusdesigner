@@ -85,6 +85,7 @@ export default {
 .PageItem {
     padding: 10rem 0;
     background-color: $white;
+    overflow-x: hidden;
 
     > div {
         display: flex;
