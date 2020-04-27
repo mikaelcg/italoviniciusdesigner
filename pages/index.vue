@@ -1,7 +1,9 @@
 <template>
     <div class="Home">
         <IndexPageHeader>
-            <template v-slot:PageHeaderTitle> ÍTALO VINÍCIUS </template>
+            <template v-slot:PageHeaderTitle>
+                ÍTALO VINÍCIUS
+            </template>
             <template v-slot:PageHeaderSubtitle>
                 UX DESIGNER
             </template>
@@ -22,20 +24,24 @@
         >
             <template v-slot:PageItemImage>
                 <img
-                    @click="goToPage(item.to)"
                     :src="item.imageUrl"
+                    @click="goToPage(item.to)"
                     :alt="item.title"
                     class="Home__ItemImage"
                 />
             </template>
-            <template v-slot:PageItemTitle>{{ item.title }}</template>
-            <template v-slot:PageItemSubtitle> {{ item.subtitle }}</template>
+            <template v-slot:PageItemTitle>
+                {{ item.title }}
+            </template>
+            <template v-slot:PageItemSubtitle>
+                {{ item.subtitle }}
+            </template>
             <template v-slot:PageItemDescription>
                 {{ item.description }}
             </template>
         </IndexPageItem>
 
-        <About></About>
+        <About />
     </div>
 </template>
 

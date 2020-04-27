@@ -9,13 +9,13 @@
                         data-aos-duration="800"
                     >
                         <h1>
-                            <slot name="PageHeaderTitle"></slot>
+                            <slot name="PageHeaderTitle" />
                         </h1>
 
                         <span>/</span>
 
                         <h2>
-                            <slot name="PageHeaderSubtitle"></slot>
+                            <slot name="PageHeaderSubtitle" />
                         </h2>
                     </div>
 
@@ -23,12 +23,12 @@
                         class="PageHeader__content-text-description"
                         data-aos="fade-left"
                     >
-                        <slot name="PageHeaderDescription"></slot>
+                        <slot name="PageHeaderDescription" />
                     </p>
                 </div>
 
                 <div class="PageHeader__content-image">
-                    <slot name="PageHeaderImage"></slot>
+                    <slot name="PageHeaderImage" />
                 </div>
             </div>
 

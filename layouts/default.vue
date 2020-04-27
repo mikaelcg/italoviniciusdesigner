@@ -1,21 +1,25 @@
 <template>
     <v-app class="App">
         <template v-if="!isMobile">
-            <Header></Header>
+            <Header />
             <transition name="showMenu">
                 <Header
                     v-if="hasScrolled"
                     :fixed="hasScrolled"
                     :white="whiteFixedTopMenu"
-                    :activeOption="activeMenuOption"
+                    :active-option="activeMenuOption"
                 ></Header>
             </transition>
         </template>
-        <HeaderMobile v-else></HeaderMobile>
+        <HeaderMobile
+            v-else
+            :white="whiteFixedTopMenu"
+            :active-option="activeMenuOption"
+        />
         <v-content class="App__content">
             <nuxt />
         </v-content>
-        <Footer></Footer>
+        <Footer />
     </v-app>
 </template>
 

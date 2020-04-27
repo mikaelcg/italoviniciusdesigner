@@ -1,9 +1,15 @@
 <template>
     <div class="UmmenseNovoMenu">
-        <PageHeader :backgroundColorDarkGrey="true"
-            ><template v-slot:PageHeaderTitle>UMMENSE</template>
-            <template v-slot:PageHeaderSubtitle>APLICATIVO</template>
-            <template v-slot:PageHeaderYear>2019</template>
+        <PageHeader :background-color-dark-grey="true">
+            <template v-slot:PageHeaderTitle>
+                UMMENSE
+            </template>
+            <template v-slot:PageHeaderSubtitle>
+                NOVO MENU
+            </template>
+            <template v-slot:PageHeaderYear>
+                2019
+            </template>
             <template v-slot:PageHeaderDescription>
                 Desenvolvimento de um menu mais consistente
             </template>
@@ -13,7 +19,9 @@
         </PageHeader>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>VISÃO GERAL</template>
+            <template v-slot:PageItemTextTitle>
+                VISÃO GERAL
+            </template>
             <template v-slot:PageItemText>
                 Com o crescimento da plataforma, a Ummense vem recebendo novas
                 features, o que levou a necessidade do menu passar para a
@@ -29,7 +37,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>O DESAFIO</template>
+            <template v-slot:PageItemTextTitle>
+                O DESAFIO
+            </template>
             <template v-slot:PageItemText>
                 No novo menu vertical, o campo de busca que antes tinha um lugar
                 privilegiado no topo, passou a ser uma opção na parte inferior.
@@ -49,7 +59,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>A SOLUÇÃO</template>
+            <template v-slot:PageItemTextTitle>
+                A SOLUÇÃO
+            </template>
             <template v-slot:PageItemText>
                 Para encontrar a solução, desenhamos uma jornada do usuário, e
                 identificamos pontos que provavam que seria complicado procurar
@@ -73,7 +85,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>PORÉM...</template>
+            <template v-slot:PageItemTextTitle>
+                PORÉM...
+            </template>
             <template v-slot:PageItemText>
                 Após os testes identificamos outros pontos a serem melhorados.
                 <br /><br />
@@ -97,7 +111,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>NOVA SOLUÇÃO</template>
+            <template v-slot:PageItemTextTitle>
+                NOVA SOLUÇÃO
+            </template>
             <template v-slot:PageItemText>
                 Tendo definido que o usuário precisaria fazer o login, em
                 seguida identificar a organização que acessou, depois procurar
@@ -111,13 +127,13 @@
                 <span>Organização</span>
             </div>
 
-            <div class="Divider"></div>
+            <div class="Divider" />
 
             <div class="Text">
                 <span>Busca</span>
             </div>
 
-            <div class="Divider"></div>
+            <div class="Divider" />
 
             <div class="Text">
                 <span>Demais itens</span>
@@ -144,7 +160,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>O RESULTADO</template>
+            <template v-slot:PageItemTextTitle>
+                O RESULTADO
+            </template>
             <template v-slot:PageItemText>
                 Por fim, temos um menu com uma organização baseada na jornada e
                 objetivos do usuário.
@@ -156,8 +174,10 @@
             </template>
         </PageItemText>
 
-        <PageItemText :backgroundColorDarkGrey="true">
-            <template v-slot:PageItemTextTitle>O QUE EU APRENDI?</template>
+        <PageItemText :background-color-dark-grey="true">
+            <template v-slot:PageItemTextTitle>
+                O QUE EU APRENDI?
+            </template>
             <template v-slot:PageItemText>
                 Por fim, temos um menu com uma organização baseada na jornada e
                 objetivos do usuário.

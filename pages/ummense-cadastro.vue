@@ -1,9 +1,15 @@
 <template>
     <div class="Ummense-cadastro">
         <PageHeader>
-            <template v-slot:PageHeaderTitle>UMMENSE</template>
-            <template v-slot:PageHeaderSubtitle>CADASTRO</template>
-            <template v-slot:PageHeaderYear>2019</template>
+            <template v-slot:PageHeaderTitle>
+                UMMENSE
+            </template>
+            <template v-slot:PageHeaderSubtitle>
+                CADASTRO
+            </template>
+            <template v-slot:PageHeaderYear>
+                2019
+            </template>
             <template v-slot:PageHeaderDescription>
                 Um processo de cadastro mais clean e mais eficaz
             </template>
@@ -13,7 +19,9 @@
         </PageHeader>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>VISÃO GERAL</template>
+            <template v-slot:PageItemTextTitle>
+                VISÃO GERAL
+            </template>
             <template v-slot:PageItemText>
                 Com o aumento de cadastrados realizados na plataforma Ummense,
                 surgiu a necessidade de segmentar melhor o nosso público e
@@ -28,7 +36,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>O DESAFIO</template>
+            <template v-slot:PageItemTextTitle>
+                O DESAFIO
+            </template>
             <template v-slot:PageItemText>
                 O modelo antigo era mais longo do que o necessário, o que gerou
                 uma preocupação pelo fato de tornar o formulário extenso demais
@@ -41,7 +51,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>A SOLUÇÃO</template>
+            <template v-slot:PageItemTextTitle>
+                A SOLUÇÃO
+            </template>
             <template v-slot:PageItemText>
                 O formulário foi dividido em dois passos: no primeiro momento
                 ele tem questões essenciais para o cadastro e, no segundo, as
@@ -67,8 +79,10 @@
             <img src="Cadastro/Form02.png" alt="Formulario 2" />
         </div>
 
-        <PageItemText :backgroundColorBlack="true">
-            <template v-slot:PageItemTextTitle>RESULTADO</template>
+        <PageItemText :background-color-black="true">
+            <template v-slot:PageItemTextTitle>
+                RESULTADO
+            </template>
             <template v-slot:PageItemText>
                 O formulário de cadastro recebeu um novo fluxo e um novo visual.
                 Essas mudanças contribuíram para o aumento de cadastros na
@@ -80,8 +94,10 @@
             <img src="Cadastro/Resultado.png" alt="Resultado" />
         </div>
 
-        <PageItemText :backgroundColorBlack="true">
-            <template v-slot:PageItemTextTitle>O QUE EU APRENDI?</template>
+        <PageItemText :background-color-black="true">
+            <template v-slot:PageItemTextTitle>
+                O QUE EU APRENDI?
+            </template>
             <template v-slot:PageItemText>
                 Esse projeto me fez lembrar que por mais que achemos que
                 chegamos a melhor solução do mundo, sempre dá pra ir além. Após

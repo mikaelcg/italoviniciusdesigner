@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 <template>
     <header
         :class="[
@@ -12,33 +13,86 @@
 
         <transition name="showMenu">
             <div v-if="showMenu" class="HeaderMobile__Menu">
-                <div class="Menu Menu__Links">
-                    <h3>MENU</h3>
+                <div>
+                    <div class="Menu Menu__Links">
+                        <h3>MENU</h3>
 
-                    <nuxt-link to="/">Inicio</nuxt-link>
-                    <nuxt-link to="/">Sobre</nuxt-link>
+                        <a
+                            @click="handleMenuClick('#PageHeaderId')"
+                            :class="[
+                                {
+                                    active:
+                                        activeOption === 'home' &&
+                                        this.$route.name === 'index'
+                                }
+                            ]"
+                            >Início</a
+                        >
+                        <a
+                            @click="handleMenuClick('.About')"
+                            href="javascript:void(0)"
+                            >Sobre</a
+                        >
+                    </div>
+
+                    <div class="Menu Menu__Projects">
+                        <h3>PROJETOS</h3>
+
+                        <a
+                            @click="goTo('/agni')"
+                            :class="[
+                                {
+                                    active: this.$route.name === 'agni'
+                                }
+                            ]"
+                            >Agni / Aplicativo</a
+                        >
+
+                        <a
+                            @click="goTo('/ummense-novo-site')"
+                            :class="[
+                                {
+                                    active:
+                                        this.$route.name === 'ummense-novo-site'
+                                }
+                            ]"
+                            >Ummense / Novo Site</a
+                        >
+                        <a
+                            @click="goTo('/ummense-novo-menu')"
+                            :class="[
+                                {
+                                    active:
+                                        this.$route.name === 'ummense-novo-menu'
+                                }
+                            ]"
+                            >Ummense / Novo Menu</a
+                        >
+                        <a
+                            @click="goTo('/ummense-cadastro')"
+                            :class="[
+                                {
+                                    active:
+                                        this.$route.name === 'ummense-cadastro'
+                                }
+                            ]"
+                            >Ummense / Cadastro</a
+                        >
+                    </div>
                 </div>
+                <div>
+                    <div class="Menu Menu__SocialMedia">
+                        <v-icon>mdi-email-outline</v-icon>
+                        <LinkedinIcon />
+                        <BehanceIcon />
+                        <v-icon>mdi-instagram</v-icon>
+                    </div>
 
-                <div class="Menu Menu__Projects">
-                    <h3>PROJETOS</h3>
-
-                    <nuxt-link to="/">Agni / Aplicativo</nuxt-link>
-                    <nuxt-link to="/">Ummense / Novo Site</nuxt-link>
-                    <nuxt-link to="/">Ummense / Novo Menu</nuxt-link>
-                    <nuxt-link to="/">Ummense / Cadastro</nuxt-link>
-                </div>
-
-                <div class="Menu Menu__SocialMedia">
-                    <v-icon>mdi-email-outline</v-icon>
-                    <v-icon>mdi-linkedin</v-icon>
-                    <v-icon>mdi-behance</v-icon>
-                    <v-icon>mdi-instagram</v-icon>
-                </div>
-
-                <div class="Menu Menu__Close">
-                    <v-icon @click="handleShowMenu(false)" large>
-                        mdi-close
-                    </v-icon>
+                    <div class="Menu Menu__Close">
+                        <v-icon @click="handleShowMenu(false)" large
+                            >mdi-close</v-icon
+                        >
+                    </div>
                 </div>
             </div>
         </transition>
@@ -46,18 +100,41 @@
 </template>
 
 <script>
+import BehanceIcon from '@/components/icons/BehanceIcon'
+import LinkedinIcon from '@/components/icons/LinkedinIcon'
+
 export default {
     name: 'HeaderMobile',
 
-    components: {},
+    components: { BehanceIcon, LinkedinIcon },
 
-    props: {},
+    props: {
+        white: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        activeOption: {
+            type: String,
+            required: false,
+            default: 'home'
+        }
+    },
 
     data: () => ({
         showMenu: false
     }),
 
-    computed: {},
+    computed: {
+        scrollOptions() {
+            return {
+                duration: 1000,
+                offset: 0,
+                easing: 'easeInOutCubic',
+                behavior: 'smooth'
+            }
+        }
+    },
 
     watch: {},
 
@@ -68,6 +145,25 @@ export default {
     methods: {
         handleShowMenu(option) {
             return (this.showMenu = option)
+        },
+
+        handleMenuClick(goTo) {
+            this.showMenu = false
+
+            if (this.$route.name === 'index') {
+                this.$vuetify.goTo(goTo, this.scrollOptions)
+            } else {
+                this.$router.push({ name: 'index' })
+                setTimeout(() => {
+                    this.$vuetify.goTo(goTo, this.scrollOptions)
+                }, 1000)
+            }
+        },
+
+        goTo(page) {
+            this.showMenu = false
+
+            this.$router.push(page)
         }
     }
 }
@@ -94,32 +190,10 @@ export default {
 
     &.novo-menu {
         background-color: #ebebeb;
-
-        a {
-            &:hover,
-            &.active {
-                color: $dark;
-
-                &:before {
-                    transform: translateX(0);
-                }
-            }
-        }
     }
 
     &.novo-site {
         background-color: #f1f1f1;
-
-        a {
-            &:hover,
-            &.active {
-                color: $dark;
-
-                &:before {
-                    transform: translateX(0);
-                }
-            }
-        }
     }
 
     &__Menu {
@@ -134,9 +208,15 @@ export default {
         z-index: 999;
         overflow: hidden;
         overscroll-behavior: contain;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        > div:first-of-type {
+            padding: 20px 0;
+        }
 
         .Menu {
-            padding: 30px 0;
             display: flex;
             justify-content: flex-start;
             align-items: center;
@@ -153,25 +233,46 @@ export default {
             a {
                 color: $grey1;
                 font-family: $graphik-regular;
-                font-size: 1.2rem;
+                font-size: 1.8rem;
                 line-height: 2rem;
                 letter-spacing: 0.1em;
+
+                &.active {
+                    font-family: $graphik-semibold;
+                    color: $grey2;
+                }
+            }
+
+            a,
+            h3 {
+                margin-bottom: 2rem;
             }
 
             &__Links {
+                margin-bottom: 3rem;
             }
 
             &__SocialMedia {
                 flex-direction: row;
                 justify-content: center;
+                align-items: flex-end;
+                padding: 30px 0;
 
-                i {
+                i,
+                svg {
                     color: $grey1;
+                    margin: 0 15px;
+                }
+
+                svg {
+                    position: relative;
+                    bottom: 3px;
                 }
             }
 
             &__Close {
                 border-top: 1px solid $grey3;
+                padding: 10px 0;
 
                 button {
                     color: $gold;

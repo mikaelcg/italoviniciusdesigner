@@ -2,7 +2,7 @@
     <div id="PageItemId" class="PageItem">
         <v-container :class="[{ reverse: reverse }]">
             <div :data-aos="getImageAnimation()" class="PageItem__image">
-                <slot name="PageItemImage"></slot>
+                <slot name="PageItemImage" />
             </div>
             <div
                 :data-aos="getTextAnimation()"
@@ -11,21 +11,23 @@
             >
                 <div class="PageItem__text-title">
                     <span>
-                        <slot name="PageItemTitle"></slot>
+                        <slot name="PageItemTitle" />
                     </span>
 
                     <span>/</span>
 
                     <span>
-                        <slot name="PageItemSubtitle"></slot>
+                        <slot name="PageItemSubtitle" />
                     </span>
                 </div>
 
                 <p class="PageItem__text-description">
-                    <slot name="PageItemDescription"></slot>
+                    <slot name="PageItemDescription" />
                 </p>
                 <div class="PageItem__text-action">
-                    <nuxt-link :to="to">VER PROJETO</nuxt-link>
+                    <nuxt-link :to="to">
+                        VER PROJETO
+                    </nuxt-link>
                 </div>
             </div>
         </v-container>

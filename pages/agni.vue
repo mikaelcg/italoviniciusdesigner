@@ -1,9 +1,15 @@
 <template>
     <div class="Agni">
         <PageHeader>
-            <template v-slot:PageHeaderTitle>AGNI</template>
-            <template v-slot:PageHeaderSubtitle>APLICATIVO</template>
-            <template v-slot:PageHeaderYear>2019</template>
+            <template v-slot:PageHeaderTitle>
+                AGNI
+            </template>
+            <template v-slot:PageHeaderSubtitle>
+                APLICATIVO
+            </template>
+            <template v-slot:PageHeaderYear>
+                2019
+            </template>
             <template v-slot:PageHeaderDescription>
                 Um projeto desenvolvido no NASA Space Apps
             </template>
@@ -13,7 +19,9 @@
         </PageHeader>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>VISÃO GERAL</template>
+            <template v-slot:PageItemTextTitle>
+                VISÃO GERAL
+            </template>
             <template v-slot:PageItemText>
                 O AGNI foi um projeto desenvolvido no NASA Space Apps, um evento
                 anual que acontece em todo o mundo. Participei do desafio em
@@ -29,7 +37,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>O DESAFIO</template>
+            <template v-slot:PageItemTextTitle>
+                O DESAFIO
+            </template>
             <template v-slot:PageItemText>
                 Nosso principal desafio era encontrar soluções que funcionassem
                 tanto na cidade quanto em áreas mais afastadas, engajar o
@@ -37,8 +47,10 @@
             </template>
         </PageItemText>
 
-        <PageItemText :backgroundColorGrey="true">
-            <template v-slot:PageItemTextTitle>ESTRATÉGIAS</template>
+        <PageItemText :background-color-grey="true">
+            <template v-slot:PageItemTextTitle>
+                ESTRATÉGIAS
+            </template>
             <template v-slot:PageItemText>
                 Para entender nosso público desenhamos proto-personas baseado no
                 estilo de vida das regiões que precisaríamos atingir: O público
@@ -53,8 +65,10 @@
             />
         </div>
 
-        <PageItemText :backgroundColorGrey="true">
-            <template v-slot:PageItemTextTitle>PESQUISAS</template>
+        <PageItemText :background-color-grey="true">
+            <template v-slot:PageItemTextTitle>
+                PESQUISAS
+            </template>
             <template v-slot:PageItemText>
                 O segundo passo foi entrevistar pessoas que tivessem um perfil
                 semelhante aos das personas construídas. A partir daí, entender
@@ -69,7 +83,7 @@
                     <p>Não tem um aplicativo do gênero.</p>
                 </div>
 
-                <v-divider vertical></v-divider>
+                <v-divider vertical />
 
                 <div>
                     <p>86 <span>%</span></p>
@@ -79,7 +93,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>SOLUÇÃO</template>
+            <template v-slot:PageItemTextTitle>
+                SOLUÇÃO
+            </template>
             <template v-slot:PageItemText>
                 Desenhamos uma jornada de nossas personas para levantar
                 hipóteses, problemas e soluções, visando extrair ideias para o
@@ -118,8 +134,10 @@
             </template>
         </PageItemText>
 
-        <PageItemText :backgroundColorGrey="true">
-            <template v-slot:PageItemTextTitle>ENGAJAMENTO</template>
+        <PageItemText :background-color-grey="true">
+            <template v-slot:PageItemTextTitle>
+                ENGAJAMENTO
+            </template>
             <template v-slot:PageItemText>
                 Buscando engajar os usuários, a proposta pretendia fazer
                 campanhas de conscientização pois percebemos que apôs alguns
@@ -182,8 +200,10 @@
             <img src="Agni/Agni_dashboard.png" alt="Agni dashboard" />
         </div>
 
-        <PageItemText :backgroundColorBlue="true">
-            <template v-slot:PageItemTextTitle>O QUE EU APRENDI?</template>
+        <PageItemText :background-color-blue="true">
+            <template v-slot:PageItemTextTitle>
+                O QUE EU APRENDI?
+            </template>
             <template v-slot:PageItemText>
                 Nesse projeto consegui colocar em prática alguns novos
                 conhecimentos que me geraram mais aprendizados porém, a

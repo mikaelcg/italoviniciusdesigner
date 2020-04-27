@@ -8,9 +8,9 @@
                 </div>
 
                 <div v-if="$route.name === 'agni'" class="agni">
-                    <nuxt-link to="/ummense-novo-menu"
-                        >NOVO MENU <v-icon>mdi-arrow-right</v-icon></nuxt-link
-                    >
+                    <nuxt-link to="/ummense-novo-menu">
+                        NOVO MENU <v-icon>mdi-arrow-right</v-icon>
+                    </nuxt-link>
                 </div>
 
                 <div
@@ -18,11 +18,11 @@
                     class="ummense-novo-menu"
                 >
                     <nuxt-link to="/agni">
-                        <v-icon>mdi-arrow-left</v-icon>AGNI</nuxt-link
-                    >
-                    <nuxt-link to="/ummense-novo-site"
-                        >NOVO SITE <v-icon>mdi-arrow-right</v-icon></nuxt-link
-                    >
+                        <v-icon>mdi-arrow-left</v-icon>AGNI
+                    </nuxt-link>
+                    <nuxt-link to="/ummense-novo-site">
+                        NOVO SITE <v-icon>mdi-arrow-right</v-icon>
+                    </nuxt-link>
                 </div>
 
                 <div
@@ -30,11 +30,11 @@
                     class="ummense-novo-site"
                 >
                     <nuxt-link to="/ummense-novo-menu">
-                        <v-icon>mdi-arrow-left</v-icon>NOVO MENU</nuxt-link
-                    >
-                    <nuxt-link to="/ummense-cadastro"
-                        >CADASTRO <v-icon>mdi-arrow-right</v-icon></nuxt-link
-                    >
+                        <v-icon>mdi-arrow-left</v-icon>NOVO MENU
+                    </nuxt-link>
+                    <nuxt-link to="/ummense-cadastro">
+                        CADASTRO <v-icon>mdi-arrow-right</v-icon>
+                    </nuxt-link>
                 </div>
 
                 <div
@@ -42,12 +42,12 @@
                     class="ummense-cadastro"
                 >
                     <nuxt-link to="/ummense-novo-site">
-                        <v-icon>mdi-arrow-left</v-icon>NOVO SITE</nuxt-link
-                    >
+                        <v-icon>mdi-arrow-left</v-icon>NOVO SITE
+                    </nuxt-link>
                 </div>
             </div>
 
-            <v-divider dark></v-divider>
+            <v-divider dark />
 
             <div class="Footer__links">
                 <span>© {{ currentYear }} Ítalo Vinícus</span>
@@ -55,7 +55,9 @@
                 <div class="Footer__links-icons">
                     <v-tooltip top>
                         <template v-slot:activator="{ on }">
-                            <v-icon v-on="on" medium>mdi-email-outline</v-icon>
+                            <v-icon v-on="on" medium>
+                                mdi-email-outline
+                            </v-icon>
                         </template>
                         <span>Email</span>
                     </v-tooltip>
@@ -80,7 +82,9 @@
 
                     <v-tooltip top>
                         <template v-slot:activator="{ on }">
-                            <v-icon v-on="on" medium>mdi-instagram</v-icon>
+                            <v-icon v-on="on" medium>
+                                mdi-instagram
+                            </v-icon>
                         </template>
                         <span>Instagram</span>
                     </v-tooltip>

@@ -1,11 +1,17 @@
 <template>
     <div class="UmmenseNovoSite">
-        <PageHeader :backgroundColorGrey="true" :novoSite="true">
-            <template v-slot:PageHeaderTitle>UMMENSE</template>
-            <template v-slot:PageHeaderSubtitle>APLICATIVO</template>
-            <template v-slot:PageHeaderYear>2019</template>
+        <PageHeader :background-color-grey="true" :novo-site="true">
+            <template v-slot:PageHeaderTitle>
+                UMMENSE
+            </template>
+            <template v-slot:PageHeaderSubtitle>
+                NOVO SITE
+            </template>
+            <template v-slot:PageHeaderYear>
+                2019
+            </template>
             <template v-slot:PageHeaderDescription>
-                Desenvolvimento de um menu mais consistente
+                Um site mais confortável e mais atrativo.
             </template>
             <template v-slot:PageHeaderImage>
                 <img
@@ -16,7 +22,9 @@
         </PageHeader>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>VISÃO GERAL</template>
+            <template v-slot:PageItemTextTitle>
+                VISÃO GERAL
+            </template>
             <template v-slot:PageItemText>
                 A Ummense é uma plataforma de gestão de negócios que vem
                 conquistando espaço no mercado. Seu objetivo é ser uma
@@ -37,7 +45,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>O DESAFIO</template>
+            <template v-slot:PageItemTextTitle>
+                O DESAFIO
+            </template>
             <template v-slot:PageItemText>
                 Através de uma pesquisa, constatamos que o antigo site não era
                 atrativo. Havia muito conteúdo desnecessário, pouca hierarquia
@@ -51,7 +61,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>A SOLUÇÃO</template>
+            <template v-slot:PageItemTextTitle>
+                A SOLUÇÃO
+            </template>
             <template v-slot:PageItemText>
                 Desenvolvemos textos mais objetivos, exploramos imagens e
                 distribuímos o conteúdo em páginas, ao invés de uma landing
@@ -67,7 +79,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>WIREFRAMES</template>
+            <template v-slot:PageItemTextTitle>
+                WIREFRAMES
+            </template>
             <template v-slot:PageItemText>
                 O passo seguinte foi fazer uso do grid para distribuir o
                 conteúdo, ter bons espaços em branco, um layout clean e mais
@@ -80,7 +94,9 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>O RESULTADO</template>
+            <template v-slot:PageItemTextTitle>
+                O RESULTADO
+            </template>
             <template v-slot:PageItemText>
                 O novo site se apresenta de maneira mais clara, moderna e
                 consegue comunicar o que é a marca. O número de acessos em

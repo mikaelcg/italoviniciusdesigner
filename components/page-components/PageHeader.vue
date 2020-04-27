@@ -16,13 +16,13 @@
                     >
                         <div class="Text__title">
                             <h1>
-                                <slot name="PageHeaderTitle"></slot>
+                                <slot name="PageHeaderTitle" />
                             </h1>
 
                             <span>/</span>
 
                             <h2>
-                                <slot name="PageHeaderSubtitle"></slot>
+                                <slot name="PageHeaderSubtitle" />
                             </h2>
                         </div>
 
@@ -30,7 +30,7 @@
                             <span>ANO</span>
                             <span>/</span>
                             <span>
-                                <slot name="PageHeaderYear"></slot>
+                                <slot name="PageHeaderYear" />
                             </span>
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         class="PageHeader__content-text-description"
                         data-aos="fade-left"
                     >
-                        <slot name="PageHeaderDescription"></slot>
+                        <slot name="PageHeaderDescription" />
                     </p>
                 </div>
 
@@ -49,7 +49,7 @@
                         { novoSite: novoSite }
                     ]"
                 >
-                    <slot name="PageHeaderImage"></slot>
+                    <slot name="PageHeaderImage" />
                 </div>
             </div>
 
@@ -179,6 +179,18 @@ export default {
                                 color: $gold;
                                 margin: 0 1rem;
                             }
+                        }
+                    }
+
+                    @media screen and (max-width: 768px) {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: flex-start;
+                        align-items: flex-start;
+
+                        .Text__year {
+                            margin-left: 0;
+                            margin-top: 2rem;
                         }
                     }
                 }

@@ -12,14 +12,14 @@
     >
         <v-container class="PageItemText">
             <h3 class="PageItemText__title">
-                <slot name="PageItemTextTitle"></slot>
+                <slot name="PageItemTextTitle" />
             </h3>
 
             <p class="PageItemText__text">
-                <slot name="PageItemText"></slot>
+                <slot name="PageItemText" />
             </p>
 
-            <slot name="PageItemTextContent"></slot>
+            <slot name="PageItemTextContent" />
         </v-container>
     </div>
 </template>
