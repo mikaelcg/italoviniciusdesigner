@@ -126,6 +126,7 @@ export default {
                 .PageHeader__content-text-title {
                     display: flex;
                     align-items: flex-end;
+                    overflow: hidden;
 
                     .Text__title {
                         display: flex;
@@ -196,6 +197,7 @@ export default {
                 }
 
                 .PageHeader__content-text-description {
+                    overflow: hidden;
                     font-family: $acta-display-bold;
                     font-size: 36px;
                     line-height: 54px;
