@@ -55,36 +55,54 @@
                 <div class="Footer__links-icons">
                     <v-tooltip top>
                         <template v-slot:activator="{ on }">
-                            <v-icon v-on="on" medium>
-                                mdi-email-outline
-                            </v-icon>
+                            <a v-on="on" href="mailto:webmaster@example.com">
+                                <v-icon medium>
+                                    mdi-email-outline
+                                </v-icon>
+                            </a>
                         </template>
                         <span>Email</span>
                     </v-tooltip>
 
                     <v-tooltip top>
                         <template v-slot:activator="{ on }">
-                            <div v-on="on" class="IconWrapper">
+                            <a
+                                v-on="on"
+                                href="https://www.linkedin.com/in/italovfernandes/"
+                                target="__blank"
+                                class="IconWrapper"
+                            >
                                 <LinkedinIcon />
-                            </div>
+                            </a>
                         </template>
                         <span>Linkedin</span>
                     </v-tooltip>
 
                     <v-tooltip top>
                         <template v-slot:activator="{ on }">
-                            <div v-on="on" class="IconWrapper">
+                            <a
+                                v-on="on"
+                                class="IconWrapper"
+                                href="https://www.behance.net/italovinicius"
+                                target="__blank"
+                            >
                                 <BehanceIcon />
-                            </div>
+                            </a>
                         </template>
                         <span>Behance</span>
                     </v-tooltip>
 
                     <v-tooltip top>
                         <template v-slot:activator="{ on }">
-                            <v-icon v-on="on" medium>
-                                mdi-instagram
-                            </v-icon>
+                            <a
+                                v-on="on"
+                                href="https://www.instagram.com/italoviniicius/"
+                                target="__blank"
+                            >
+                                <v-icon medium>
+                                    mdi-instagram
+                                </v-icon>
+                            </a>
                         </template>
                         <span>Instagram</span>
                     </v-tooltip>
@@ -260,14 +278,17 @@ footer {
                 justify-content: center;
                 align-items: flex-end;
 
-                > i {
-                    color: $grey1;
+                a {
                     margin-left: 3rem;
 
-                    &:hover {
-                        color: $gold;
-                        transition: color 0.3s;
-                        cursor: pointer;
+                    i {
+                        color: $grey1;
+
+                        &:hover {
+                            color: $gold;
+                            transition: color 0.3s;
+                            cursor: pointer;
+                        }
                     }
                 }
 

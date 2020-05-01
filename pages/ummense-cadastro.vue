@@ -191,6 +191,15 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
     }
 }
 </style>

@@ -1,27 +1,19 @@
 <template>
     <div class="UmmenseNovoMenu">
         <PageHeader :background-color-dark-grey="true">
-            <template v-slot:PageHeaderTitle>
-                UMMENSE
-            </template>
-            <template v-slot:PageHeaderSubtitle>
-                NOVO MENU
-            </template>
-            <template v-slot:PageHeaderYear>
-                2019
-            </template>
-            <template v-slot:PageHeaderDescription>
-                Desenvolvimento de um menu mais consistente
-            </template>
+            <template v-slot:PageHeaderTitle>UMMENSE</template>
+            <template v-slot:PageHeaderSubtitle>NOVO MENU</template>
+            <template v-slot:PageHeaderYear>2019</template>
+            <template v-slot:PageHeaderDescription
+                >Desenvolvimento de um menu mais consistente</template
+            >
             <template v-slot:PageHeaderImage>
                 <img src="Novo-menu/Novo-menu-header.png" alt="Novo menu" />
             </template>
         </PageHeader>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>
-                VISÃO GERAL
-            </template>
+            <template v-slot:PageItemTextTitle>VISÃO GERAL</template>
             <template v-slot:PageItemText>
                 Com o crescimento da plataforma, a Ummense vem recebendo novas
                 features, o que levou a necessidade do menu passar para a
@@ -37,15 +29,13 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>
-                O DESAFIO
-            </template>
+            <template v-slot:PageItemTextTitle>O DESAFIO</template>
             <template v-slot:PageItemText>
                 No novo menu vertical, o campo de busca que antes tinha um lugar
                 privilegiado no topo, passou a ser uma opção na parte inferior.
-                <br /><br />
-                A busca é um item importante que tem que estar visível para o
-                usuário quando ele precisar e, com o mapeamento da tela
+                <br />
+                <br />A busca é um item importante que tem que estar visível
+                para o usuário quando ele precisar e, com o mapeamento da tela
                 percebemos que ela estava sendo subutilizado, muitas vezes
                 passando despercebido.
             </template>
@@ -59,21 +49,19 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>
-                A SOLUÇÃO
-            </template>
+            <template v-slot:PageItemTextTitle>A SOLUÇÃO</template>
             <template v-slot:PageItemText>
                 Para encontrar a solução, desenhamos uma jornada do usuário, e
                 identificamos pontos que provavam que seria complicado procurar
                 um documento sem um campo de busca acessível e nos trouxeram
                 insights para encontrar a solução.
-                <br /><br />
-                Após algumas avaliações, decidimos inserir o campo de pesquisa
-                antes dos itens do menu, tendo em vista que a busca é realizada
-                dentro deles.
-                <br /><br />
-                Os testes A/B com os usuários comprovaram que esta versão obteve
-                o melhor índice de aprovação por parte dos usuários:
+                <br />
+                <br />Após algumas avaliações, decidimos inserir o campo de
+                pesquisa antes dos itens do menu, tendo em vista que a busca é
+                realizada dentro deles.
+                <br />
+                <br />Os testes A/B com os usuários comprovaram que esta versão
+                obteve o melhor índice de aprovação por parte dos usuários:
             </template>
         </PageItemText>
 
@@ -85,21 +73,19 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>
-                PORÉM...
-            </template>
+            <template v-slot:PageItemTextTitle>PORÉM...</template>
             <template v-slot:PageItemText>
                 Após os testes identificamos outros pontos a serem melhorados.
-                <br /><br />
-                1 - Para verificar em qual organização o usuário está, ele
+                <br />
+                <br />1 - Para verificar em qual organização o usuário está, ele
                 precisava olhar na parte inferior do menu. Entretanto a
                 estrutura de leitura ocidental começa pela parte superior
                 esquerda, sendo assim o usuário percorria muitos caminhos até
                 descobrir em qual organização ele estava logado.
-                <br /><br />
-                2 - O menu de configuração é uma opção de navegação importante
-                na plataforma, e na versão antiga ele tinha uma posição
-                desfavorecida:
+                <br />
+                <br />2 - O menu de configuração é uma opção de navegação
+                importante na plataforma, e na versão antiga ele tinha uma
+                posição desfavorecida:
             </template>
         </PageItemText>
 
@@ -111,9 +97,7 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>
-                NOVA SOLUÇÃO
-            </template>
+            <template v-slot:PageItemTextTitle>NOVA SOLUÇÃO</template>
             <template v-slot:PageItemText>
                 Tendo definido que o usuário precisaria fazer o login, em
                 seguida identificar a organização que acessou, depois procurar
@@ -160,32 +144,26 @@
         </div>
 
         <PageItemText>
-            <template v-slot:PageItemTextTitle>
-                O RESULTADO
-            </template>
+            <template v-slot:PageItemTextTitle>O RESULTADO</template>
             <template v-slot:PageItemText>
                 Por fim, temos um menu com uma organização baseada na jornada e
                 objetivos do usuário.
-                <br /><br />
-
-                Depois de apresentado e validado, foram realizados novos testes
-                confirmando que a navegação se tornou mais fluida e o menu
-                alcançou uma boa adesão por parte do público.
+                <br />
+                <br />Depois de apresentado e validado, foram realizados novos
+                testes confirmando que a navegação se tornou mais fluida e o
+                menu alcançou uma boa adesão por parte do público.
             </template>
         </PageItemText>
 
         <PageItemText :background-color-dark-grey="true">
-            <template v-slot:PageItemTextTitle>
-                O QUE EU APRENDI?
-            </template>
+            <template v-slot:PageItemTextTitle>O QUE EU APRENDI?</template>
             <template v-slot:PageItemText>
                 Por fim, temos um menu com uma organização baseada na jornada e
                 objetivos do usuário.
-                <br /><br />
-
-                Depois de apresentado e validado, foram realizados novos testes
-                confirmando que a navegação se tornou mais fluida e o menu
-                alcançou uma boa adesão por parte do público.
+                <br />
+                <br />Depois de apresentado e validado, foram realizados novos
+                testes confirmando que a navegação se tornou mais fluida e o
+                menu alcançou uma boa adesão por parte do público.
             </template>
         </PageItemText>
 
@@ -323,10 +301,32 @@ export default {
                     margin-bottom: 5rem;
                 }
 
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
                 &:last-child {
                     h5 {
                         position: relative;
                         left: 5.2rem;
+                    }
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+
+                > div {
+                    justify-content: center;
+                    align-items: center;
+
+                    &:last-child {
+                        margin-top: 5rem;
+
+                        h5 {
+                            left: 0;
+                        }
                     }
                 }
             }

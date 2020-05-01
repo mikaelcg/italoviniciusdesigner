@@ -82,10 +82,35 @@
                 </div>
                 <div>
                     <div class="Menu Menu__SocialMedia">
-                        <v-icon>mdi-email-outline</v-icon>
-                        <LinkedinIcon />
-                        <BehanceIcon />
-                        <v-icon>mdi-instagram</v-icon>
+                        <!-- Email -->
+                        <a href="mailto:webmaster@example.com">
+                            <v-icon medium>
+                                mdi-email-outline
+                            </v-icon>
+                        </a>
+                        <!-- Linkedin -->
+                        <a
+                            href="https://www.linkedin.com/in/italovfernandes/"
+                            target="__blank"
+                        >
+                            <LinkedinIcon />
+                        </a>
+                        <!-- Behance -->
+                        <a
+                            href="https://www.behance.net/italovinicius"
+                            target="__blank"
+                        >
+                            <BehanceIcon />
+                        </a>
+                        <!-- Instagram -->
+                        <a
+                            href="https://www.instagram.com/italoviniicius/"
+                            target="__blank"
+                        >
+                            <v-icon medium>
+                                mdi-instagram
+                            </v-icon>
+                        </a>
                     </div>
 
                     <div class="Menu Menu__Close">
@@ -243,7 +268,7 @@ export default {
                 }
             }
 
-            a,
+            > a,
             h3 {
                 margin-bottom: 2rem;
             }
@@ -258,15 +283,14 @@ export default {
                 align-items: flex-end;
                 padding: 30px 0;
 
+                a {
+                    margin-bottom: 0;
+                }
+
                 i,
                 svg {
                     color: $grey1;
                     margin: 0 15px;
-                }
-
-                svg {
-                    position: relative;
-                    bottom: 3px;
                 }
             }
 
